@@ -1,0 +1,64 @@
+/* fonts : 
+
+font-family: 'Galada', cursive; (Titre)
+font-family: 'Raleway', sans-serif; (Texte)
+
+*/ 
+
+.titre {
+    font-family: 'Galada', cursive;
+    font-size: 60px;
+    margin: 0 auto;
+}
+
+.welcome_txt {
+    font-family: 'Raleway', sans-serif;
+    width: 600px;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+.font_titre {
+    font-family: 'Galada', cursive;
+}
+
+.font_txt {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.bouton_geolocalise_moi {
+    padding: 15px 25px;
+    background-color: #da2627;
+    border-radius: 5px;
+    width: 140px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.bouton_geolocalise_moi_div {
+    margin-top: 50px;
+    display: flex;
+    align-items: baseline;
+}
+
+.custom_input {
+    border: 1.5px solid #999;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 220px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.or {
+    margin-right: 70px;
+}
