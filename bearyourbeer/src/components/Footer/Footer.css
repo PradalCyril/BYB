@@ -1,6 +1,7 @@
 .footerGestion{
     display: flex;
-    margin-bottom: 0;
+    
+    
 }
 
 .footerGeneral{
@@ -16,9 +17,12 @@
 
 .fb-like{
     margin-right: 1vw;
+    height: 20px;
     
 }
-
+.tw-like{
+    
+}
 @media screen and (min-width: 400px){
     .footerGeneral{
         margin:0;

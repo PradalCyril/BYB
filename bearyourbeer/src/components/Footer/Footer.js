@@ -29,8 +29,8 @@ class Footer extends Component {
                         data-share="false">
                     </div>
                     
-                    <div className='fb-like'>
-                        <a href="https://twitter.com/PradalCyril?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false">Follow We</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                    <div className='fb-like tw-like'>
+                        <a href="https://twitter.com/PradalCyril?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow We</a><script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
                         
                         
                     </div>
