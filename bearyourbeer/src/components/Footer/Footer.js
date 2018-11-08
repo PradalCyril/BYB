@@ -9,7 +9,7 @@ class Footer extends Component {
         return (
             <footer className='footerGestion'>
                 <div className="footerGeneral">
-                    <div><h5>©2018 Bear Your Beer</h5></div>
+                    <div><h5 className="footer-text">©2018 Bear Your Beer</h5></div>
                     <div className="social-like">
                         <div className="fb-like">
                             <a href="https://www.facebook.com/wildcodeschool/" class="sharebox">
