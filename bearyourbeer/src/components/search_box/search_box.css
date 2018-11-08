@@ -1,0 +1,17 @@
+/* fonts : 
+
+font-family: 'Galada', cursive; (Titre)
+font-family: 'Raleway', sans-serif; (Texte)
+
+*/ 
+
+.custom_input {
+    border: 1.5px solid #999;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 220px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
