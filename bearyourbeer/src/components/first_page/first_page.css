@@ -49,6 +49,19 @@ font-family: 'Raleway', sans-serif; (Texte)
     align-items: baseline;
 }
 
+.bouton_go {
+    margin-left: 15px;
+    padding: 15px 25px;
+    border: 1.5px solid;
+    border-color: #999;
+    border-radius: 5px;
+    width: 140px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-right: 100px;
+}
+
 .custom_input {
     border: 1.5px solid #999;
     border-top: none;
@@ -61,4 +74,12 @@ font-family: 'Raleway', sans-serif; (Texte)
 
 .or {
     margin-right: 70px;
+}
+
+#canvas {
+    /* background-color: aqua; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
 }
