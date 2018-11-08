@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import First_page from './components/first_page/first_page'
-import Footer from './components/Footer/Footer'
 
 
 class App extends Component {
@@ -9,7 +8,6 @@ class App extends Component {
     return (
       
       <First_page />
-      <Footer />
 
     );
   }
