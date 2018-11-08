@@ -19,7 +19,7 @@ class Footer extends Component {
                         </div>
 
                         <div className='fb-like tw-like'>
-                            <a href="https://twitter.com/PradalCyril?ref_src=twsrc%5Etfw" class="sharebox">
+                            <a href="https://twitter.com/WildSchool_Bxl" class="sharebox">
                                 <i class="fab fa-twitter"></i>
                                 <span class="fb-icon"></span>
                             </a>
