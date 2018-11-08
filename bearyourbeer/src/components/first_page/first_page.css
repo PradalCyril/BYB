@@ -5,16 +5,32 @@ font-family: 'Raleway', sans-serif; (Texte)
 
 */ 
 
+.container_first-page{
+    height: 100%;
+    color: #3F4145;
+    
+}
+
+.shape-bg{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.content-container{
+    width: 46.875%;
+    padding-top: 17%;
+}
 .titre {
     font-family: 'Galada', cursive;
-    font-size: 60px;
+    font-size: 4.209em;
     margin: 0 auto;
 }
 
 .welcome_txt {
     font-family: 'Raleway', sans-serif;
     width: 600px;
-    font-size: 25px;
+    font-size: 1.555em;
     line-height: 1.4;
     margin-top: 0;
 }
@@ -33,14 +49,13 @@ font-family: 'Raleway', sans-serif; (Texte)
 }
 
 .bouton_geolocalise_moi {
-    padding: 15px 25px;
+    padding: 20px 25px;
     background-color: #da2627;
     border-radius: 5px;
-    width: 140px;
     font-family: 'Raleway', sans-serif;
     color: white;
     text-decoration: none;
-    margin-right: 100px;
+    margin-right: 2%;;
 }
 
 .bouton_geolocalise_moi_div {
@@ -51,7 +66,7 @@ font-family: 'Raleway', sans-serif; (Texte)
 
 .bouton_go {
     margin-left: 15px;
-    padding: 15px 25px;
+    padding: 19px 25px;
     border: 1.5px solid;
     border-color: #999;
     border-radius: 5px;
@@ -73,13 +88,82 @@ font-family: 'Raleway', sans-serif; (Texte)
 }
 
 .or {
-    margin-right: 70px;
+    margin-right: 2%;
 }
 
 #canvas {
     /* background-color: aqua; */
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: -1;
+}
+
+@media screen and (max-width: 1300px){
+    .container{
+        width: 1080px;
+    }
+}
+
+
+@media screen and (max-width: 1080px){
+    .container{
+        width: 90%;
+    }
+
+    .content-container{
+        width: 90%;
+        padding-top: 25%;
+    }
+
+    .titre {
+        font-size: 3em;
+    }
+
+    .welcome_txt {
+        font-size: 1.333em;
+    }
+
+    .welcome_txt {
+        font-size: 1.333em;
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 750px){
+.bouton_geolocalise_moi_div {
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+.bouton_geolocalise_moi {
+    margin: 0 auto;
+}
+
+form{
+    margin: 0 auto;
+}
+
+.or{
+    margin: 0 auto;
+    padding: 1em 0 0.2em 0;
+}
+.bouton_go {
+    margin-right: 0;
+    margin-left: 1em;
+    margin-right: 0;
+    margin-top: 0;
+    display: inline-block;
+}
+
+    .titre{
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (max-width: 468px){
+.bouton_go {
+    margin-top: 1em;
+}
 }
