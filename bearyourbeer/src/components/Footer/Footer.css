@@ -30,7 +30,7 @@
 
 .sharebox:hover {
     background-color: #3a3a3a;
-    color: rgba(218,38,39,0.75);
+    color: rgba(218,38,39,1);
 }
 
 .sharebox > .fb-icon {
