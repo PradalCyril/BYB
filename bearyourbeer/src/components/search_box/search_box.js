@@ -5,8 +5,6 @@ import PlacesAutocomplete, {
     getLatLng,
   } from 'react-places-autocomplete';
 
-// API Google Map : AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I
-
 
 
 class Search_box extends React.Component {
@@ -28,6 +26,7 @@ class Search_box extends React.Component {
   
     render() {
       return (
+        <div className = "search_box_placing">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -37,7 +36,7 @@ class Search_box extends React.Component {
             <div>
               <input
                 {...getInputProps({
-                  placeholder: 'Search Places ...',
+                  placeholder: 'I choose a good place ...',
                   className: 'location-search-input',
                 })}
               />
@@ -66,6 +65,7 @@ class Search_box extends React.Component {
             </div>
           )}
         </PlacesAutocomplete>
+        </div>
       );
     }
   }

@@ -5,13 +5,9 @@ font-family: 'Raleway', sans-serif; (Texte)
 
 */ 
 
-.custom_input {
-    border: 1.5px solid #999;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    width: 220px;
-    padding: 12px;
-    box-sizing: border-box;
+
+.search_box_placing {
+    text-align: center;
+    margin-top: 300px;
 }
 
