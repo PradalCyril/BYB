@@ -23,6 +23,7 @@ class Search_box extends React.Component {
         .then(latLng => console.log('Success', latLng))
         .catch(error => console.error('Error', error));
     };
+    
   
     render() {
       return (
