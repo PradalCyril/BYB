@@ -7,7 +7,11 @@ font-family: 'Raleway', sans-serif; (Texte)
 
 
 .search_box_placing {
-    text-align: center;
+    margin-left: 300px;
     margin-top: 300px;
+}
+
+.location-search-input {
+    text-align: left;
 }
 
