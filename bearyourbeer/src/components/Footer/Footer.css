@@ -1,0 +1,37 @@
+.footer-text{
+    color:#ffffff;
+    margin-left: 2vw;
+}
+
+.footer{ 
+    height: 35px;
+    width: 100vw;
+    background-color: #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-like{
+    display: flex;
+}
+
+svg{
+  height: 20px;
+  width:20px;  
+}
+.sharebox {
+    padding: 0.8vw 1vh;
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+.sharebox:hover {
+    background-color: #3a3a3a;
+    color: rgba(218,38,39,1);
+}
+
+@media screen and (min-width: 400px){
+    .footer{
+        height: 60px; 
+    } 
+}
