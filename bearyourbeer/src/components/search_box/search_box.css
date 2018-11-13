@@ -1,17 +1,10 @@
-/* fonts : 
-
-font-family: 'Galada', cursive; (Titre)
-font-family: 'Raleway', sans-serif; (Texte)
-
-*/ 
-
-
-.search_box_placing {
-    margin-left: 300px;
-    margin-top: 300px;
-}
-
-.location-search-input {
-    text-align: left;
+.custom_input {
+    border: none;
+    border-bottom: 2px solid #999;
+    width: 220px;
+    padding: 20px 0;
+    line-height: 1em;
+    box-sizing: border-box;
+    text-align: center;
 }
 

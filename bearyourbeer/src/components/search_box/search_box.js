@@ -35,10 +35,10 @@ class Search_box extends React.Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div>
-              <input
+              <input 
                 {...getInputProps({
                   placeholder: 'I choose a good place ...',
-                  className: 'location-search-input',
+                  className: 'location-search-input custom_input',
                 })}
               />
               <div className="autocomplete-dropdown-container">
