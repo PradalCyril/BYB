@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './search_box.css';
+import './SearchBox.css';
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
@@ -7,7 +7,7 @@ import PlacesAutocomplete, {
 
 
 
-class Search_box extends React.Component {
+class SearchBox extends Component {
     constructor(props) {
       super(props);
       this.state = { address: '' };
@@ -72,4 +72,4 @@ class Search_box extends React.Component {
   }
 
 
-export default Search_box;
+export default SearchBox;
