@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './FirstPage.css';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 // import './bubles'
 
 
@@ -34,7 +33,7 @@ class FirstPage extends Component {
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
                         <div className="btn_geoloc_content">
-                            <a className="btn_geoloc button" href="./component/page.html">Geo-Localize me !</a>
+                            <NavLink to="/Geo_page" className="btn_geoloc button"> Geo-Localize me !</NavLink>
 
                             <p className="or">Or</p>
 
@@ -45,7 +44,7 @@ class FirstPage extends Component {
                                     <label className="font_txt" htmlFor="adresse"><span className="hidden">address</span></label><input className="custom_input" placeholder="I choose the address of the tour" type="text" name="address" id="address" />
                                 
                                 
-                                <a className="bouton_go button" href="./component/page.html">Go</a>
+                                <NavLink to="/Address_page" className="bouton_go button">Go</NavLink>
                                 
                             </form>
                         </div>
