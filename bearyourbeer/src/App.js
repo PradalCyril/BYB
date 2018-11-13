@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import FirstPage from './components/FirstPage/FirstPage'
-
+import FirstPage from './components/FirstPage/FirstPage.js';
+import Routing from "./Routing";
 
 class App extends Component {
   render() {
     return (
-      
-      <FirstPage />
+      <div>
+      <Routing />
+      </div>
 
     );
   }
