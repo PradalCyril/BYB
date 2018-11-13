@@ -13,11 +13,6 @@ class ListBar extends Component {
                 <div>
                     <ul className="ub-list-bar">
                         <ItemBar />
-                        <ItemBar />
-                        <ItemBar />
-                        <ItemBar />
-                        <ItemBar />
-
                     </ul>
                 </div>
             </div>
