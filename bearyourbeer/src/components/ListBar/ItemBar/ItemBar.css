@@ -10,12 +10,13 @@
 .item-bar-container{
     display: flex;
     width: 100%;
-    height: 150px;
     padding: 0 1em;
 }
 .img-bar-container{
-    height: 120px;
+    padding: 1em 0;
     width: 120px;
+    height: 120px;
+    min-width: 120px;
     overflow: hidden;
     align-self: center;
     border-radius: 4px;
@@ -25,7 +26,9 @@
 }
 
 .text-bar-container{
+    position: relative;
     padding: 0 2em;
+    width: 100%;
 }
 
 .title-bar{
@@ -35,5 +38,15 @@
 
 .adresse-bar{
     font-style: italic;
-    margin-top: .5em;;
+    margin-top: .5em;
+    font-size: .9em;
+}
+
+.point-bar{
+    text-align: right;
+    position: absolute;
+    right: 2em;
+    color: red;
+    top: .7em;
+    font-weight: 400;
 }

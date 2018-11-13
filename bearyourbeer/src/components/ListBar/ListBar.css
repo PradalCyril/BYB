@@ -10,72 +10,14 @@
     margin: 0 auto;
 }
 
+.ul-list-bar{
+
+}
+
 .content-container{
     margin: 0 auto;
     width: 90%;
     padding-top: 25%;
-}
-
-.welcome_txt {
-    width: 100%;
-    font-size: 1.333em;
-    line-height: 1.4;
-    margin-top: 0;
-}
-
-.btn_geoloc {
-    background-color: #da2627;
-    color: white;
-}
-
-.btn_geoloc_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.bouton_go {
-    margin-left: 15px;
-    border: 2px solid;
-    border-color: #999;
-    color: black;
-}
-
-.localise-form{
-    display: flex;
-}
-
-.custom_input {
-    border: none;
-    border-bottom: 2px solid #999;
-    width: 220px;
-    padding: 20px 0;
-    line-height: 1em;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.or {
-    margin:0 2%;
-    padding: 20px 0;
-
-}
-
-#canvas {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    display: none;
-}
-
-.relative{
-    position: relative;
-    min-height: 100vh;
-    height: 100%;
 }
 
 @media screen and (min-width: 750px){
@@ -84,14 +26,7 @@
         padding-top: 17%;
         margin: 0;
     }
-    .btn_geoloc_content {
-        flex-direction: row;
-    align-items: flex-end;
-
-    }
-    #canvas {
-        display: block;
-    }
+    
 }
 
 @media screen and (min-width: 1080px){

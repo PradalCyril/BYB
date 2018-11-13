@@ -8,14 +8,12 @@ class ItemBar extends Component {
             <li className="item-bar">
                 <div className="item-bar-container">
                     <div className="img-bar-container">
-                        <img className="img-bar" src={ require('../images/bar.jpg') } />
+                        <img className="img-bar" src={ require('../images/bar.jpg') } alt="img" />
                     </div>
                     <div className="text-bar-container">
-                        <h3 className="title-bar">Les champs Elysée</h3>
-                        <p className="adresse-bar">1000 Paris</p>
-                        <p>Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.
-                            
-                        </p>
+                        <h3 className="title-bar">Les champs Elysée <span className="point-bar">7,5</span></h3>
+                        <p className="adresse-bar">(1000 Paris)</p>
+                        <p>Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.</p>
                     </div>
                 </div>
             </li>
