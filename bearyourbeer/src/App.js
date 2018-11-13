@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import FirstPage from './components/FirstPage/FirstPage'
+import ListBar from './components/ListBar/ListBar'
 
 
 class App extends Component {
   render() {
     return (
       
-      <FirstPage />
+      <ListBar />
 
     );
   }
