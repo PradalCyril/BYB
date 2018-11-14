@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './SearchBox.css';
+import './search_box.css';
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
@@ -7,7 +7,7 @@ import PlacesAutocomplete, {
 
 
 
-class SearchBox extends Component {
+class Search_box extends React.Component {
     constructor(props) {
       super(props);
       this.state = { address: '' };
@@ -23,11 +23,9 @@ class SearchBox extends Component {
         .then(latLng => console.log('Success', latLng))
         .catch(error => console.error('Error', error));
     };
-    
   
     render() {
       return (
-        <div className = "search_box_placing">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -35,10 +33,10 @@ class SearchBox extends Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div>
-              <input 
+              <input
                 {...getInputProps({
-                  placeholder: 'I choose a good place ...',
-                  className: 'location-search-input custom_input',
+                  placeholder: 'Search Places ...',
+                  className: 'location-search-input',
                 })}
               />
               <div className="autocomplete-dropdown-container">
@@ -47,6 +45,7 @@ class SearchBox extends Component {
                   const className = suggestion.active
                     ? 'suggestion-item--active'
                     : 'suggestion-item';
+                  // inline style for demonstration purpose
                   const style = suggestion.active
                     ? { backgroundColor: '#fafafa', cursor: 'pointer' }
                     : { backgroundColor: '#ffffff', cursor: 'pointer' };
@@ -65,10 +64,9 @@ class SearchBox extends Component {
             </div>
           )}
         </PlacesAutocomplete>
-        </div>
       );
     }
   }
 
 
-export default SearchBox;
+export default Search_box;
