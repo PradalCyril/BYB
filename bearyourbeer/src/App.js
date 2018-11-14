@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import FirstPage from './components/FirstPage/FirstPage'
-
+import SearchBox from './components/SearchBox/SearchBox'
 
 class App extends Component {
   render() {
     return (
-      
-      <FirstPage />
+    
+      <SearchBox />
 
     );
   }
