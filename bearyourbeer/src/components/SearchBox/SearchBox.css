@@ -8,3 +8,7 @@
     text-align: center;
 }
 
+.autocomplete-dropdown-container {
+    position: absolute;
+}
+
