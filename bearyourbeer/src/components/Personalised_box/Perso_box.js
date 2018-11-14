@@ -11,8 +11,14 @@ const nombreBars = {
 
 const Perso_box = () => (
     <div>
-        {<Range_Slider titre={"Beer Distance : "} minimum={1} maximum={15} />}
-        {<Range_Slider titre={"Parcours Distance : "} minimum={2} maximum={40} />}
+        <div className="perso-box">
+            {<Range_Slider titre={"Beer Distance : "} minimum={1} maximum={15} />}
+            {<Range_Slider titre={"Parcours Distance : "} minimum={2} maximum={40} />}
+            {<Range_Slider titre={"Nombres de Bars : "} minimum={3} maximum={10} />}
+        </div>
+        <div className="search-box">
+            <input type="text"></input>
+        </div>
     </div>
 )
 

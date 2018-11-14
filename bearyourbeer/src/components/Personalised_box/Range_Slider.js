@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './Range_slider.css';
 
 class Range_slider extends Component {
+    constructor(props){
+        
+
+    }
 
     render() {
         return (
@@ -31,10 +35,11 @@ class Range_slider extends Component {
 
     sliderValue(ev) {
         this._result.value = ev.target.value;
-        let nbPixels=100/this.props.maximum
-        nbPixels=(nbPixels)
-        this._result.style.left = (ev.target.value)*nbPixels + '%';
-        this._result.classList.add("LOL");
+        let difference=this.props.maximum-this.props.minimum 
+        let moinsdifference=0-this.props.minimum
+        let nbPixels=100/difference
+        this._result.style.left = (parseInt(ev.target.value)+moinsdifference)*nbPixels + '%';
+        
     }
 
 }

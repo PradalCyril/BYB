@@ -1,4 +1,6 @@
-
+ul{
+    padding:0;
+}
 .range-slider{
     display: flex;
     flex-direction: column;
@@ -7,6 +9,7 @@
 li{
     width:150px;
     list-style-type: none;
+    font-family: 'Raleway', sans-serif;
 }
 .mdr{
     font-size: 0.75em;
