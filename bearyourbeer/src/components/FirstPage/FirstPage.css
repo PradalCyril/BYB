@@ -67,7 +67,7 @@
 
 }
 
-#canvas {
+.canvas {
     width: 100vw;
     height: 100vh;
     max-width: 100%;
@@ -94,7 +94,7 @@
     align-items: flex-end;
 
     }
-    #canvas {
+    .canvas {
         display: block;
     }
 }
