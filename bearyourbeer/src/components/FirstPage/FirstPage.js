@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './FirstPage.css';
 // import './bubles'
+import SearchBox from '../SearchBox/SearchBox';
 
 
 
@@ -40,8 +41,8 @@ class FirstPage extends Component {
                             {/* _________Bouton "entrer adresse"_________ */}
                             <form className="localise-form" method="post" action="traitement.php">
                                 
-                                    <label className="font_txt" htmlFor="adresse"><span className="hidden">address</span></label><input className="custom_input" placeholder="I choose the address of the tour" type="text" name="address" id="address" />
-                            
+                                    
+                            <SearchBox />
                                 
                                 <a className="bouton_go button" href="./component/page.html">Go</a>
                                 
