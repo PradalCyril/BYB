@@ -1,45 +1,126 @@
 import React, { Component } from 'react';
 import './Range_slider.css';
 
-class Range_slider extends Component {
-    constructor(props){
-        
+import SearchBox from '../SearchBox/SearchBox'
 
+
+class Range_slider extends Component {
+    constructor(props) {
+        super(props);
+        this.handLeChange= this.handLeChange.bind(this);
     }
 
+    handLeChange(e){
+        this.props.onChangeValue(e.target.value)
+    }
     render() {
+
         return (
             <div>
-                <ul className="global" onInput={(ev) => this.sliderValue(ev)}>
-                    <li className="li-titre">{this.props.titre}</li>
-                    <li className="li-slider">
-                        <ul className="range-slider">
-                        <li className="li-output">
-                            <output ref={(el) => { this._result = el }} id="result">{this.props.minimum}</output>
-                            </li>
-                            <li className="li-input">
-                                <input type="range" defaultValue={this.props.minimum} min={this.props.minimum} max={this.props.maximum} className="slider-range">
-                                </input>
-                            </li>
-                            <li className="min-max-slider">
-                                <span className="range-slider__value">{this.props.minimum}</span>
-                                
-                                <span className="range-slider__value">{this.props.maximum}</span>
+                <div className="perso-box">
+                    <div>
+                        <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
+                            <li className="li-titre" id="titre">{"Beer Distance"}</li>
+                            <li className="li-slider">
+                                <ul className="range-slider">
+                                    <li className="li-output">
+                                        <output ref={(el) => { this._result1 = el }} id="result1">{1}</output>
+                                    </li>
+                                    <li className="li-input">
+                                        <input type="range" ref={(el) => { this._inpout1 = el }} id="inpout1" defaultValue={1} min={1} max={15} className="slider-range" >
+                                        </input>
+                                    </li>
+                                    <li className="min-max-slider">
+                                        <span className="range-slider__value">{1}</span>
+
+                                        <span className="range-slider__value">{15}</span>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                </ul>
+                    </div>
+                    <div>
+                        <ul className="global" onInput={(ev) => this.sliderValue2(ev)}>
+                            <li className="li-titre" id="titre">{"Distance from the course : (km)"}</li>
+                            <li className="li-slider">
+                                <ul className="range-slider">
+                                    <li className="li-output">
+                                        <output ref={(el) => { this._result2 = el }} id="result2">{2}</output>
+                                    </li>
+                                    <li className="li-input">
+                                        <input type="range" ref={(el) => { this._inpout2 = el }} id="inpout2" defaultValue={2} min={2} max={10} className="slider-range" >
+                                        </input>
+                                    </li>
+                                    <li className="min-max-slider">
+                                        <span className="range-slider__value">{2}</span>
+
+                                        <span className="range-slider__value">{10}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul className="global" onInput={(ev) => this.sliderValue3(ev)}>
+                            <li className="li-titre" id="titre">{"Nomber of Bars : "}</li>
+                            <li className="li-slider">
+                                <ul className="range-slider">
+                                    <li className="li-output">
+                                        <output ref={(el) => { this._result3 = el }} id="result3">{3}</output>
+                                    </li>
+                                    <li className="li-input">
+                                        <input type="range" ref={(el) => { this._inpout3 = el }} id="inpout3" defaultValue={3} min={3} max={10} className="slider-range" >
+                                        </input>
+                                    </li>
+                                    <li className="min-max-slider">
+                                        <span className="range-slider__value">{3}</span>
+
+                                        <span className="range-slider__value">{10}</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="search-box">
+                    <SearchBox />
+                </div>
+
             </div>
         )
     }
 
-    sliderValue(ev) {
-        this._result.value = ev.target.value;
-        let difference=this.props.maximum-this.props.minimum 
-        let moinsdifference=0-this.props.minimum
-        let nbPixels=100/difference
-        this._result.style.left = (parseInt(ev.target.value)+moinsdifference)*nbPixels + '%';
-        
+    sliderValue1(ev) {
+        this.props.onChangeValue1(ev.target.value)
+        this._result1.value = ev.target.value;
+        this.setState({ uservalue1: ev.target.value })
+        let difference = this._inpout1.max - this._inpout1.min
+        let moinsdifference = 0 - this._inpout1.min
+        let nbPixels = 100 / difference
+        this._result1.style.left = (parseInt(ev.target.value) + moinsdifference) * nbPixels + 4 + '%';
+
+
+    }
+    sliderValue2(ev) {
+        this.props.onChangeValue2(ev.target.value)
+        this._result2.value = ev.target.value;
+        this.setState({ uservalue2: ev.target.value })
+        let difference = this._inpout2.max - this._inpout2.min
+        let moinsdifference = 0 - this._inpout2.min
+        let nbPixels = 100 / difference
+        this._result2.style.left = (parseInt(ev.target.value) + moinsdifference) * nbPixels + 4 + '%';
+
+    }
+    sliderValue3(ev) {
+        this.props.onChangeValue3(ev.target.value)
+        this._result3.value = ev.target.value;
+        this.setState({ uservalue3: ev.target.value })
+        let difference = this._inpout3.max - this._inpout3.min
+        let moinsdifference = 0 - this._inpout3.min
+        let nbPixels = 100 / difference
+        this._result3.style.left = (parseInt(ev.target.value) + moinsdifference) * nbPixels + 4 + '%';
+
+
     }
 
 }

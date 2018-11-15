@@ -1,20 +1,21 @@
 .perso-box{
     padding: 10px;
     width:150px;
-    background-color: gray;
+    background-color: white;
     border-style: solid;
-    border-color: grey;
+    border-color: white;
     border-radius:10px;
     margin-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    
 }
 .search-box{
     padding: 10px;
     width:150px;
-    background-color: gray;
+    background-color: white;
     border-style: solid;
-    border-color: grey;
+    border-color: white;
     border-radius:10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -23,6 +24,9 @@
    
 }
 
+.coucou{
+    width: 100px;
+}
 input{
     
 }
