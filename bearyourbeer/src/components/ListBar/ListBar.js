@@ -13,7 +13,7 @@ class ListBar extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=cafe&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I', {
+    fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I', {
       headers: {
         'Access-Control-Allow-Origin': '*',
       }
@@ -27,7 +27,7 @@ class ListBar extends Component {
   render() {
 
     const itemBar = this.state.bar.map((test, index) => (
-      <ItemBar key={index} data={test} />
+      <ItemBar key={index} data  ={test} />
     ))
     return (
       <div>
