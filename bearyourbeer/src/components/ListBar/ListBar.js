@@ -2,7 +2,16 @@ import React from "react";
 import "./ListBar.css"
 import ItemBar from "./ItemBar/ItemBar";
 
-// src/Quotes.js
+fetch('{ "https://randomuser.me/api?nat=fr')
+    .then(results  =>  results.json()) // conversion du résultat en JSON
+    .then(data  => {
+        console.log("hello"); // affiche "John Smith"
+});
+
+
+
+
+
 const bars = [
   {
     title:"Test 1",
@@ -34,8 +43,21 @@ const bars = [
   }
 ];
 
-const ListBar = () => (
-  <div>
+
+class ListBar extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      // on peut mettre notre sampleEmployee par défaut
+      // afin d'avoir toujours un employé d'affiché
+      bar:  bars
+    };
+  }
+
+  render() {
+    return (
+      <div>
     {bars.map((propri, index) => (
       <ItemBar key={index} title={propri.title} photo={propri.photo} adress={propri.adress} description={propri.description} note={propri.note}  />
     ))}
