@@ -1,67 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ListBar.css"
 import ItemBar from "./ItemBar/ItemBar";
-
-fetch('{ "https://randomuser.me/api?nat=fr')
-    .then(results  =>  results.json()) // conversion du résultat en JSON
-    .then(data  => {
-        console.log("hello"); // affiche "John Smith"
-});
-
-
-
-
-
-const bars = [
-  {
-    title:"Test 1",
-    adress: "5000 Namur",
-    photo:"https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
-    description: "Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.",
-    note: "7,4"
-  },
-  {
-    title:"Test 2",
-    adress: "7510 bx",
-    photo:"https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
-    description: "Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.",
-    note: "7,4"
-  },
-  {
-    title:"Test 3",
-    adress: "5040 Paris",
-    photo:"https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
-    description: "Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.",
-    note: "7,4"
-  },
-  {
-    title:"Test 4",
-    adress: "54556 Londre",
-    photo:"https://u.tfstatic.com/restaurant_photos/581/201581/169/612/kombi-bar-vue-de-la-salle-87e4b.jpg",
-    description: "Bar avec plus de 2000 bières. Concert le jeudi soir et objets déco sur l'univers de la brasserie.",
-    note: "7,4"
-  }
-];
-
 
 class ListBar extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      // on peut mettre notre sampleEmployee par défaut
-      // afin d'avoir toujours un employé d'affiché
-      bar:  bars
+      bar: []
     };
   }
 
+  componentDidMount() {
+    this.setState({ isLoading: true });
+    fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=cafe&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      }
+    })
+      .then((response) => response.json())
+      .then((data) => this.setState({ bar: data.results }))
+  }
+
+
+
   render() {
+
+    const itemBar = this.state.bar.map((test, index) => (
+      <ItemBar key={index} data={test} />
+    ))
     return (
       <div>
-    {bars.map((propri, index) => (
-      <ItemBar key={index} title={propri.title} photo={propri.photo} adress={propri.adress} description={propri.description} note={propri.note}  />
-    ))}
-    </div>
-);
+         {itemBar}
+      </div>
+    )
+  }
+};
+
 
 export default ListBar;
