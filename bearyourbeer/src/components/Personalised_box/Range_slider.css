@@ -138,12 +138,12 @@ input::-ms-track {
     color: transparent;
     height: 2px;
     margin-top: 10px;
-    width: 240px;
+    width: 130px;
   }
   
   input::-ms-thumb {
-    height: 18px;
-    width: 28px;
+    height: 14px;
+    width: 14px;
     background: #fff;
     border-radius: 8px;
     border: 1px solid #777;
