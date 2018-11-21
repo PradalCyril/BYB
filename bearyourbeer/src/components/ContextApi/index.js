@@ -1,5 +1,5 @@
 import React from 'react';
-import {DataProvider, DataConsumer} from "./context";
+import {DataProvider, DataConsumer} from "./DataContext";
 import SearchBox from "./SearchBox";
 
 
