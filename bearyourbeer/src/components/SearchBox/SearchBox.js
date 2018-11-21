@@ -1,33 +1,40 @@
 import React, { Component } from 'react';
 import './SearchBox.css';
 import PlacesAutocomplete, {
-    geocodeByAddress,
-    getLatLng,
-  } from 'react-places-autocomplete';
+  geocodeByAddress,
+  getLatLng,
+} from 'react-places-autocomplete';
+import { DataProvider } from "../ContextApi/context";
+
 
 
 
 class SearchBox extends Component {
-    constructor(props) {
-      super(props);
-      this.state = { address: '' };
-    }
+  constructor(props) {
+    super(props);
+    this.state = { address: '' };
+  }
+
+  handleChange = address => {
+    this.setState({ address });
+  };
+
+  handleSelect = address => {
+    geocodeByAddress(address)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => console.log('Success', latLng))
+      .catch(error => console.error('Error', error));
+  };
+
+
+  render() {
+    return (
+
+      <div className="search_box_placing">
   
-    handleChange = address => {
-      this.setState({ address });
-    };
+        <DataProvider value={this.state.address}>
+        </DataProvider>
   
-    handleSelect = address => {
-      geocodeByAddress(address)
-        .then(results => getLatLng(results[0]))
-        .then(latLng => console.log('Success', latLng))
-        .catch(error => console.error('Error', error));
-    };
-    
-  
-    render() {
-      return (
-        <div className = "search_box_placing">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -35,7 +42,7 @@ class SearchBox extends Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div>
-              <input 
+              <input
                 {...getInputProps({
                   placeholder: 'I choose a good place ...',
                   className: 'location-search-input custom_input',
@@ -65,10 +72,10 @@ class SearchBox extends Component {
             </div>
           )}
         </PlacesAutocomplete>
-        </div>
-      );
-    }
+      </div>
+    );
   }
+}
 
 
 export default SearchBox;
