@@ -4,7 +4,9 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
-import { DataProvider } from "../ContextApi/context";
+
+import { DataConsumer, DataProvider } from "../ContextApi/DataContext";
+
 
 
 
@@ -12,7 +14,9 @@ import { DataProvider } from "../ContextApi/context";
 class SearchBox extends Component {
   constructor(props) {
     super(props);
-    this.state = { address: '' };
+    this.state = {
+      address: ''
+      };
   }
 
   handleChange = address => {
@@ -22,7 +26,9 @@ class SearchBox extends Component {
   handleSelect = address => {
     geocodeByAddress(address)
       .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
+      .then(latLng =>
+        this.props.callback(latLng)
+      )
       .catch(error => console.error('Error', error));
   };
 
@@ -30,11 +36,9 @@ class SearchBox extends Component {
   render() {
     return (
 
+
       <div className="search_box_placing">
-  
-        <DataProvider value={this.state.address}>
-        </DataProvider>
-  
+
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}

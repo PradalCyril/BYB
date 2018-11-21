@@ -1,6 +1,11 @@
 import React from 'react';
 
-const DataContext = React.createContext({});
+const data = {
+    lat: 0,
+    long:0
+}
+
+const DataContext = React.createContext(data);
 
 
 export const DataProvider = DataContext.Provider;

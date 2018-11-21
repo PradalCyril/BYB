@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './FirstPage.css';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
+import { DataProvider, DataConsumer } from '../ContextApi/DataContext';
 
 
 
@@ -34,7 +35,11 @@ class FirstPage extends Component {
 
                         <p className="welcome_txt">
                             Where do you start?
+                          
                         </p>
+                        <DataConsumer >
+                            {context => <p>{context.lat}</p>}
+                        </DataConsumer>
                     </div>
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
@@ -48,7 +53,7 @@ class FirstPage extends Component {
                             <form className="localise-form" method="post" action="traitement.php">
                                 
                                     
-                            <SearchBox />
+                            <SearchBox callback={(data) => this.props.callback(data)}/>
                                 
                                 <a className="bouton_go button" href="./component/page.html">Go</a>
                                 
