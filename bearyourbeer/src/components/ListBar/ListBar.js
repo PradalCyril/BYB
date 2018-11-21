@@ -7,9 +7,13 @@ class ListBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bar: []
+      bar: [],
+      numberBar: "2"
     };
+
+    this.countbar = this.countbar.bind(this);
   }
+
 
   componentDidMount() {
     this.setState({ isLoading: true });
@@ -19,23 +23,35 @@ class ListBar extends Component {
       }
     })
       .then((response) => response.json())
-      .then((data) => this.setState({ bar: data.results }))
+      .then((data) => {
+        this.setState({ bar: data.results })
+        this.countbar()
+      }
+      )
+
   }
+
+  countbar() {
+    const constNumberBar = this.state.bar.length;
+    this.setState({ numberBar: constNumberBar });
+  }
+
 
 
 
   render() {
 
     const itemBar = this.state.bar.map((test, index) => (
-      <ItemBar key={index} data  ={test} />
+      <ItemBar key={index} data={test} />
     ))
+
     return (
-      <div>
-         {itemBar}
+      <div className="container-list-bar">
+        <p>We found {this.state.numberBar} bars you could be interested in.</p>
+        {itemBar}
       </div>
     )
   }
 };
-
 
 export default ListBar;

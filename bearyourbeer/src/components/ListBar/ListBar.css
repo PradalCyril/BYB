@@ -1,7 +1,9 @@
 
 
-.list-bar-container{
+.container-list-bar{
     padding-top: 5em;
+    width: 1080px;
+    margin: 0 auto;
 }
 
 .container {
