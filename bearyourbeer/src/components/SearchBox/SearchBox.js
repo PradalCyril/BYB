@@ -72,6 +72,8 @@ class SearchBox extends Component {
             </div>
           )}
         </PlacesAutocomplete>
+
+        <a className="bouton_go button" href="./component/page.html">Go</a>
         </div>
       );
     }
