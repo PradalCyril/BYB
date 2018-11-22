@@ -28,13 +28,12 @@ class SearchBox extends Component {
           };
         });
     };
-
     
     
   
     render() {
       return (
-        <div className = "search_box_placing">
+        <div className = "search_box_placing flex_content">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -71,6 +70,7 @@ class SearchBox extends Component {
               </div>
             </div>
           )}
+          
         </PlacesAutocomplete>
 
         <a className="bouton_go button" href="./component/page.html">Go</a>

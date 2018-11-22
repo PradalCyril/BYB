@@ -12,3 +12,14 @@
     position: absolute;
 }
 
+.bouton_go {
+    margin-left: 15px;
+    border: 2px solid;
+    border-color: #999;
+    color: black;
+}
+
+.flex_content {
+    display: flex;
+}
+
