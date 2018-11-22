@@ -8,17 +8,17 @@ class BarsOnMap extends Component {
                 lat: '50.8475967',
                 lng: '4.3586516'
             },
-            userdistance:'1000',
-            geometry: []
+            userdistance: '1000',
+            geometry: {}
         }
     }
-    
+
     render() {
         console.log(this.state.geometry)
         return (
-            
+
             <div>
-            <button onClick={() => this.getBars}></button>
+                <button onClick={() => this.getBars}></button>
 
 
             </div>
@@ -29,10 +29,11 @@ class BarsOnMap extends Component {
             .then(response => response.json())
             .then(data => {
                 this.setState({
-                    geometry: data.results.geometry.location
+                    geometry: data.results
                 });
             }
             )
+
     }
 }
 
