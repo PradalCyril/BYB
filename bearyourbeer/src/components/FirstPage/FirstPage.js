@@ -48,7 +48,7 @@ class FirstPage extends Component {
                                                                 
                                 <SearchBox />
                                 
-                                <a className="bouton_go button" href="./component/page.html">Go</a>
+                                
 
                         </div>
                 </div>
