@@ -9,30 +9,40 @@ class BarsOnMap extends Component {
                 lng: '4.3586516'
             },
             userdistance: '1000',
-            geometry: {}
+            bar1: [],
+            bar2: [],
+            bar3: [],
+            bar4: [],
+            bar5: []
         }
     }
 
     render() {
-        console.log(this.state.geometry)
+
         return (
-
             <div>
-                <button onClick={() => this.getBars}></button>
-
-
+                
             </div>
         )
     }
-    getBars() {
-        fetch(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=50.8475967,4.3586516&radius=1000&type=bar&rankby&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`)
+
+
+    componentDidMount() {
+        fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I'
+            , {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                }
+            })
             .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    geometry: data.results
-                });
-            }
-            )
+            .then((data1) => {
+                this.setState({ bar1: data1.results[0], bar2: data1.results[1], bar3: data1.results[2], bar4: data1.results[3], bar5: data1.results[4] });
+            })
+    }
+    componentDidUpdate() {
+
+        return this.state.bar1
+        
 
     }
 }
