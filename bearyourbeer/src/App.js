@@ -6,9 +6,9 @@ import MyMap from './components/Map/Map';
 class App extends Component {
   render() {
     return (
-    <div>
+    <span>
       <MyMap />
-    </div>
+    </span>
     );
   }
 }
