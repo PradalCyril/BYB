@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Range_slider from './components/Personalised_box/Range_Slider';
-
+import BarOnMap from './components/Bar_on_map/index'
 
 
 class App extends Component {
@@ -33,12 +33,14 @@ class App extends Component {
   
   render() {
     return (
+      <div>
       <Range_slider
         onChangeValue1={this.handBeerDistance}
         onChangeValue2={this.handDistance}
         onChangeValue3={this.handNbBar}
       />
-      
+      <BarOnMap />
+      </div>
     );
   }
 }
