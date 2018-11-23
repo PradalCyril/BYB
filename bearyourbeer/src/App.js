@@ -34,9 +34,9 @@ class App extends Component {
   render() {
     return (
       <Range_slider
-        onChangeValue1={this.handBeerDistance}
-        onChangeValue2={this.handDistance}
-        onChangeValue3={this.handNbBar}
+        onChangeValue1={(user) => this.handleBeerDistance(user)}
+        onChangeValue2={(user) => this.handleDistance(user)}
+        onChangeValue3={(user) => this.handleNbBar(user)}
       />
       
     );

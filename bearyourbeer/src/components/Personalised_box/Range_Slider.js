@@ -7,12 +7,8 @@ import SearchBox from '../SearchBox/SearchBox'
 class Range_slider extends Component {
     constructor(props) {
         super(props);
-        this.handleChange= this.handleChange.bind(this);
     }
 
-    handleChange(e){
-        this.props.onChangeValue(e.target.value)
-    }
     render() {
 
         return (
@@ -93,7 +89,7 @@ class Range_slider extends Component {
     sliderValue1(ev) {
         this.props.onChangeValue1(ev.target.value)
         this._result1.value = ev.target.value;
-        this.setState({ uservalue1: ev.target.value })
+        this.setState({ beerDistance: ev.target.value })
         let difference = this._inpout1.max - this._inpout1.min
         let moinsdifference = 0 - this._inpout1.min
         let nbPixels = 100 / difference
@@ -104,7 +100,7 @@ class Range_slider extends Component {
     sliderValue2(ev) {
         this.props.onChangeValue2(ev.target.value)
         this._result2.value = ev.target.value;
-        this.setState({ uservalue2: ev.target.value })
+        this.setState({ distance: ev.target.value })
         let difference = this._inpout2.max - this._inpout2.min
         let moinsdifference = 0 - this._inpout2.min
         let nbPixels = 100 / difference
@@ -114,7 +110,7 @@ class Range_slider extends Component {
     sliderValue3(ev) {
         this.props.onChangeValue3(ev.target.value)
         this._result3.value = ev.target.value;
-        this.setState({ uservalue3: ev.target.value })
+        this.setState({ nbBar: ev.target.value })
         let difference = this._inpout3.max - this._inpout3.min
         let moinsdifference = 0 - this._inpout3.min
         let nbPixels = 100 / difference
