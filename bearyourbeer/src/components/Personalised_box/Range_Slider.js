@@ -7,20 +7,20 @@ import SearchBox from '../SearchBox/SearchBox'
 class Range_slider extends Component {
     constructor(props) {
         super(props);
-        this.handLeChange= this.handLeChange.bind(this);
+        this.handleChange= this.handleChange.bind(this);
     }
 
-    handLeChange(e){
+    handleChange(e){
         this.props.onChangeValue(e.target.value)
     }
     render() {
 
         return (
-            <div>
+            <React.Fragment>
                 <div className="perso-box">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
-                            <li className="li-titre" id="titre">{"Beer Distance"}</li>
+                            <li className="li-titre" id="titre">Beer Distance</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -41,7 +41,7 @@ class Range_slider extends Component {
                     </div>
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue2(ev)}>
-                            <li className="li-titre" id="titre">{"Distance from the course : (km)"}</li>
+                            <li className="li-titre" id="titre">Distance from the course : (km)</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -62,7 +62,7 @@ class Range_slider extends Component {
                     </div>
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue3(ev)}>
-                            <li className="li-titre" id="titre">{"Nomber of Bars : "}</li>
+                            <li className="li-titre" id="titre">Nomber of Bars :</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -86,7 +86,7 @@ class Range_slider extends Component {
                     <SearchBox />
                 </div>
 
-            </div>
+            </React.Fragment>
         )
     }
 
