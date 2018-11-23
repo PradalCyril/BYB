@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox'
 import FirstPage from './components/FirstPage/FirstPage'
-import {DataProvider, DataConsumer} from "./components/ContextApi/DataContext";
+import {DataProvider} from "./components/ContextApi/DataContext";
 
 
 class App extends Component {

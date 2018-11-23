@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './FirstPage.css';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
-import { DataProvider, DataConsumer } from '../ContextApi/DataContext';
+import { DataConsumer } from '../ContextApi/DataContext';
 
 
 
@@ -50,7 +50,7 @@ class FirstPage extends Component {
 
 
                             {/* _________Bouton "entrer adresse"_________ */}
-                            <form className="localise-form" method="post" action="traitement.php">
+                            <form className="localise-form" method="post">
                                 
                                     
                             <SearchBox callback={(data) => this.props.callback(data)}/>
