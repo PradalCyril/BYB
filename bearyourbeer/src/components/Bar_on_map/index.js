@@ -20,15 +20,14 @@ class BarsOnMap extends Component {
     render() {
 
         return (
-            <div>
-                
+            <div>    
             </div>
         )
     }
 
 
     componentDidMount() {
-        fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I'
+        fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?location=${this.state.user.lat},${this.state.user.lng}&radius=${this.state.userdistance}&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
             , {
                 headers: {
                     'Access-Control-Allow-Origin': '*',
@@ -40,11 +39,17 @@ class BarsOnMap extends Component {
             })
     }
     componentDidUpdate() {
-
-        return this.state.bar1
+        console.log(this.state.user.lat)
+        console.log(this.state.userdistance)
+            console.log(this.state.bar2.geometry.location)
+            console.log(this.state.bar3.geometry.location)
+            console.log(this.state.bar4.geometry.location)
+            console.log(this.state.bar5.geometry.location)
+        
         
 
     }
 }
+
 
 export default BarsOnMap;
