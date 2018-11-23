@@ -4,7 +4,6 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Card, CardText, Button } from 'reactstrap';
 import ouvrebouteille from './ouvrebouteille2.svg';
 import {  getLocation } from './API';
-
 import './Map.css';
 
 const myIcon = L.icon({
