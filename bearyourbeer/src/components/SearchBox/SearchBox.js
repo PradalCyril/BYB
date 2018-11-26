@@ -1,44 +1,36 @@
 import React, { Component } from 'react';
 import './SearchBox.css';
 import PlacesAutocomplete, {
-  geocodeByAddress,
-  getLatLng,
-} from 'react-places-autocomplete';
-
-import { DataConsumer, DataProvider } from "../ContextApi/DataContext";
-
-
+    geocodeByAddress,
+    getLatLng,
+  } from 'react-places-autocomplete';
 
 
 
 class SearchBox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      address: ''
-      };
-  }
-
-  handleChange = address => {
-    this.setState({ address });
-  };
-
-  handleSelect = address => {
-    geocodeByAddress(address)
-      .then(results => getLatLng(results[0]))
-      .then(latLng =>
-        this.props.callback(latLng)
-      )
-      .catch(error => console.error('Error', error));
-  };
-
-
-  render() {
-    return (
-
-
-      <div className="search_box_placing">
-
+    constructor(props) {
+      super(props);
+      this.state = { 
+        address: '',
+        latLng : {} };
+    }
+  
+    handleChange = address => {
+      this.setState({ address });
+    };
+  
+    handleSelect = address => {
+      geocodeByAddress(address)
+        .then(results => getLatLng(results[0]))
+        .then(latLng => this.setState({ address: address, latLng: latLng }))
+        .catch(error => console.error('Error', error));
+    };
+    
+    
+  
+    render() {
+      return (
+        <div className = "search_box_placing flex_content">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -46,7 +38,7 @@ class SearchBox extends Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div>
-              <input
+              <input 
                 {...getInputProps({
                   placeholder: 'I choose a good place ...',
                   className: 'location-search-input custom_input',
@@ -75,11 +67,14 @@ class SearchBox extends Component {
               </div>
             </div>
           )}
+          
         </PlacesAutocomplete>
-      </div>
-    );
+
+        <a className="bouton_go button" href="./component/page.html">Go</a>
+        </div>
+      );
+    }
   }
-}
 
 
 export default SearchBox;
