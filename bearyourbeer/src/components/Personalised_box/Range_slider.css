@@ -92,4 +92,56 @@ input {
     border: 1px solid #777;
   }
 
+  input::-moz-range-track {
+    width: 130px;
+    height: 2px;
+  }
   
+  input::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #777;
+    position: relative;
+  }
+  
+  input::-moz-range-progress {
+    height: 2px;
+    background: #e33d44;
+    border: 0;
+    margin-top: 0;
+  }
+input::-ms-track {
+    background: transparent;
+    border: 0;
+    border-color: transparent;
+    border-radius: 0;
+    border-width: 0;
+    color: transparent;
+    height: 2px;
+    margin-top: 10px;
+    width: 130px;
+  }
+  
+  input::-ms-thumb {
+    height: 14px;
+    width: 14px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #777;
+  }
+  
+  input::-ms-fill-lower {
+    background: #e33d44;
+    border-radius: 0;
+  }
+  
+  input::-ms-fill-upper {
+    background: #c7c7c7;
+    border-radius: 0;
+  }
+  
+  input::-ms-tooltip {
+    display: none;
+  }
