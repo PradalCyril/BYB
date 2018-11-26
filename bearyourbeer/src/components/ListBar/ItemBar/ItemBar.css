@@ -2,8 +2,10 @@
 .item-bar{
     list-style: none;
     background-color: #F6F6F6;
-    border-radius: 4px;
+    border-radius: 10px;
     margin: 3em 0;
+    box-shadow: 0 10px 60px 0px rgba(0,0,0,.13);
+
 }
 
 .item-bar-container{
@@ -11,44 +13,50 @@
     width: 100%;
 }
 .img-bar-container{
-    width: 250px;
-    height: 250px;
-    /*min-height: 150px;*/
-    min-width: 250px;
+    position: relative;
+    width: 18%;
+    padding-bottom: 18%;
+    min-width: 18%;
     overflow: hidden;
     align-self: center;
     border-radius: 50%;
-    box-shadow: 0 30px 50px 5px rgba(0,0,0,.33);
+    box-shadow: 0 20px 50px 5px rgba(0,0,0,.23);
     margin-left: 5%;
     transform: translateY(-30px);
 }
 .img-bar{
     min-height: 100%;
-    width: 100%;
+    min-width: 100%;
+    position: absolute;
+    max-width: 150%;
+    max-height: 150%;
 }
 
 .text-bar-container{
     position: relative;
-    padding: 0 2em;
     width: 100%;
+    padding: 1em 0;
+    margin-left: 3em;
+    align-self: center;
 }
 
 .title-bar{
-    color: #DA2627;
+    color: #707070;
     text-transform: uppercase;
     font-weight: 900;
     font-size: 35px;
     margin-bottom: 0;
-    margin-top: .5em;
+    margin-top: 0;
 }
 
 
 .star-svg svg{
-    width: 30px;
+    width: 25px;
+    padding: 0 .3em;
 }
 .adresse-bar{
     margin-top: .5em;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #696C73;
 }
 
@@ -59,4 +67,28 @@
     color: red;
     top: .7em;
     font-weight: 400;
+}
+
+.opening-green{
+    color:#fff;
+    background-color: #47AD17;
+    border: solid 4px #318909;
+    padding: .2em .5em;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: inline-block;
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+.opening-red{
+    color:#fff;
+    background-color: #DA2627;
+    border: solid 4px #AF151D;
+    padding: .2em .5em;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: inline-block;
+    margin-top:0;
+    margin-bottom: 0;
 }

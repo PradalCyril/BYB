@@ -8,7 +8,8 @@ class ListBar extends Component {
     super(props);
     this.state = {
       bar: [],
-      numberBar: "2"
+      numberBar: "2",
+      star: []
     };
 
     this.countbar = this.countbar.bind(this);
@@ -36,8 +37,7 @@ class ListBar extends Component {
     this.setState({ numberBar: constNumberBar });
   }
 
-
-
+ 
 
   render() {
 
@@ -47,7 +47,7 @@ class ListBar extends Component {
 
     return (
       <div className="container-list-bar">
-        <p>We found {this.state.numberBar} bars you could be interested in.</p>
+        <p className="list-bar--title">We found {this.state.numberBar} bars you could be interested in.</p>
         {itemBar}
       </div>
     )

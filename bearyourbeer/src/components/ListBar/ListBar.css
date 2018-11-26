@@ -22,6 +22,9 @@
     padding-top: 25%;
 }
 
+.list-bar--title{
+    font-size: 25px;
+}
 @media screen and (min-width: 750px){
     .content-container{
         width: 46.875%;
