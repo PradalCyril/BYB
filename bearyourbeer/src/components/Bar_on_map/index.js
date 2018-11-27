@@ -23,7 +23,7 @@ class BarsOnMap extends Component {
 
 
     componentDidMount() {
-        fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?location=${this.props.userLat},${this.props.userLng}&radius=${this.props.userdistance}&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
+        fetch(`https://maps.googleapis.com/maps/api/place/textsearch/json?location=${this.props.userLatLng.lat},${this.props.userLatLng.lng}&radius=${this.props.userdistance}&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`
             , {
                 headers: {
                     'Access-Control-Allow-Origin': '*',

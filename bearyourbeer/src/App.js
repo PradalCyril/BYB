@@ -32,6 +32,8 @@ componentDidUpdate(){
         
         <BarOnMap 
           getBars={bar => this.getBars(bar)}
+          userLatLng={this.state.latLng}
+          userdistance={this.state.beerDistance}
           
           />
       </div>
