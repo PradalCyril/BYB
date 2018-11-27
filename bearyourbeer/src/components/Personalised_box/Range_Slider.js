@@ -16,7 +16,7 @@ class Range_slider extends Component {
                 <div className="perso-box">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
-                            <li className="li-titre" id="titre">Beer Distance</li>
+                            <li className="li-titre" id="titre">Beer Distance (km)</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">

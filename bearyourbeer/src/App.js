@@ -10,9 +10,6 @@ import Range_slider from './components/Personalised_box/Range_Slider';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleBeerDistance=this.handleBeerDistance.bind(this);
-    this.handleDistance=this.handleDistance.bind(this);
-    this.handleNbBar=this.handleNbBar.bind(this);
     this.state = {
       beerDistance: 1,
       distance: 2,
