@@ -45,14 +45,11 @@ class FirstPage extends Component {
 
 
                             {/* _________Bouton "entrer adresse"_________ */}
-                            <form className="localise-form" method="post" action="traitement.php">
+                                                                
+                                <SearchBox />
                                 
-                                    
-                            <SearchBox />
                                 
-                                <a className="bouton_go button" href="./component/page.html">Go</a>
-                                
-                            </form>
+
                         </div>
                 </div>
             </div>
