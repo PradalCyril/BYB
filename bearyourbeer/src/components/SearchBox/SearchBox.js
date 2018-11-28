@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './search_box.css';
+import './SearchBox.css';
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
@@ -7,7 +7,7 @@ import PlacesAutocomplete, {
 
 
 
-class Search_box extends React.Component {
+class SearchBox extends Component {
     constructor(props) {
       super(props);
       this.state = { address: '' };
@@ -23,9 +23,11 @@ class Search_box extends React.Component {
         .then(latLng => console.log('Success', latLng))
         .catch(error => console.error('Error', error));
     };
+    
   
     render() {
       return (
+        <div className = "search_box_placing">
         <PlacesAutocomplete
           value={this.state.address}
           onChange={this.handleChange}
@@ -33,10 +35,10 @@ class Search_box extends React.Component {
         >
           {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
             <div>
-              <input
+              <input 
                 {...getInputProps({
-                  placeholder: 'Search Places ...',
-                  className: 'location-search-input',
+                  placeholder: 'I choose a good place ...',
+                  className: 'location-search-input custom_input',
                 })}
               />
               <div className="autocomplete-dropdown-container">
@@ -45,7 +47,6 @@ class Search_box extends React.Component {
                   const className = suggestion.active
                     ? 'suggestion-item--active'
                     : 'suggestion-item';
-                  // inline style for demonstration purpose
                   const style = suggestion.active
                     ? { backgroundColor: '#fafafa', cursor: 'pointer' }
                     : { backgroundColor: '#ffffff', cursor: 'pointer' };
@@ -64,9 +65,10 @@ class Search_box extends React.Component {
             </div>
           )}
         </PlacesAutocomplete>
+        </div>
       );
     }
   }
 
 
-export default Search_box;
+export default SearchBox;
