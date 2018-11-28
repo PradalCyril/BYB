@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SimpleMap from './components/addressmap/SimpleMap';
+import SimpleMap from './components/Addressmap/SimpleMap';
 class Address-page extends Component {
         super(props)
     render() {
