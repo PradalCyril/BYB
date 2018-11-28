@@ -38,7 +38,7 @@ class FirstPage extends Component {
                           
                         </p>
                         <DataConsumer >
-                            {context => <p>{context.lat}</p>}
+                            {context => <p>{context.lat}-{context.long}</p>}
                         </DataConsumer>
                     </div>
 
@@ -55,7 +55,7 @@ class FirstPage extends Component {
                                     
                             <SearchBox callback={(data) => this.props.callback(data)}/>
                                 
-                                <a className="bouton_go button" href="./component/page.html">Go</a>
+            
                                 
                             </form>
                         </div>
