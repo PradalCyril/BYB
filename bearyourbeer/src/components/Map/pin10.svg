@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.22 41.8"><defs><style>.cls-1{fill:#707070;}.cls-2{fill:none;stroke:#ffd400;stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>10</title><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M12.15,9.41a14,14,0,0,0,4.27-.64,20,20,0,0,0,4.26-2L15.34,31.9H10.51L14.94,11H11.75Z"/><path class="cls-1" d="M28.74,32.21c-2.49,0-4.27-.65-5.34-1.93s-1.61-3.59-1.61-6.9q0-7.26,3.24-12a9.83,9.83,0,0,1,8.41-4.7,5.08,5.08,0,0,1,4.5,2.17q1.47,2.16,1.47,6.6a22.5,22.5,0,0,1-.67,5.3,24.39,24.39,0,0,1-1.84,5.14,13.67,13.67,0,0,1-3.65,4.65A7.25,7.25,0,0,1,28.74,32.21ZM33.2,8.47A3.38,3.38,0,0,0,30.9,10a14.47,14.47,0,0,0-2.23,3.91,21.43,21.43,0,0,0-1,3.4A25.25,25.25,0,0,0,27.09,21C27,22.05,27,22.77,27,23.18s0,.78,0,1.14a10.72,10.72,0,0,0,.51,3.79c.33.85.83,1.28,1.48,1.28,1.74,0,3.2-1.59,4.36-4.75A32.92,32.92,0,0,0,35,13.34a11.34,11.34,0,0,0-.44-3.8A1.46,1.46,0,0,0,33.2,8.47Z"/><path class="cls-2" d="M37.07,41a23.6,23.6,0,0,0,0-40.1"/><path class="cls-2" d="M12.15.85a23.6,23.6,0,0,0,0,40.1"/></g></g></svg>
+<svg width="580" height="400.00000000000006" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <defs>
+   <style>.cls-1{fill:#707070;}.cls-2{fill:none;stroke:#ffd400;stroke-miterlimit:10;stroke-width:2px;}</style>
+  </defs>
+  <path d="m270.49884,110.205498c0,1.500092 -0.054718,2.492767 -0.500031,6.000366c-0.570251,4.491905 -1.505463,9.134903 -3.500214,15.500938c-1.610291,5.139114 -2.000122,7.500458 -2.000122,8.000488l0,0.500031l0,1.000061" id="svg_31" stroke-opacity="null" stroke-width="0" stroke="#000" fill="none"/>
+  <g stroke="null" id="svg_38">
+   <g stroke="null" id="svg_36" fill="#000000" transform="matrix(0.04863362245160378,0,0,-0.03910566381637382,-1744.6474878627478,-403.10109946368186) ">
+    <path stroke="null" fill="#da2627" id="svg_37" d="m41681.165396,-10539.970599c-276,-28 -392,-47 -590,-99c-853,-222 -1563,-798 -1958,-1590c-299,-600 -385,-1335 -232,-1975c76,-316 165,-524 413,-970c269,-484 315,-559 787,-1285c111,-170 256,-395 322,-500c768,-1214 1218,-2270 1474,-3459c15,-68 18,-62 44,64c104,524 325,1206 568,1755c302,682 612,1227 1260,2214c450,688 566,882 791,1331c253,502 304,636 370,960c69,340 65,774 -10,1150c-115,575 -417,1120 -860,1551c-471,457 -1078,743 -1774,834c-118,15 -516,28 -605,19z"/>
+   </g>
+  </g>
+  <text stroke="#000" transform="matrix(13.433609008789062,0,0,10.528879165649412,-2937.271930456162,-680.633221387863) " xml:space="preserve" text-anchor="start" font-family="Georgia, Times, 'Times New Roman', serif" font-size="20" id="svg_43" y="82.633851" x="230.013829" stroke-opacity="null" stroke-width="0" fill="#ffffff">10</text>
+  <defs>
+   <style>.cls-1{fill:#da2627;}.cls-2{fill:#fff;}</style>
+  </defs>
+ </g>
+</svg>
