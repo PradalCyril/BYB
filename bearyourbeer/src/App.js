@@ -14,7 +14,7 @@ class App extends Component {
 	    <Switch>
 		<Route exact path="/" component={FirstPage} />
                   <Route path="/geo-page" render={props => <Geo-page location={this.state.bars} />} />
-                  <Route path="/address-page" component={Address-page} />
+                  <Route path="/address-page" render={props => <Address-page location={this.state.bars} addresslocation={this.state.data} />} />
 	    </Switch>
       </div>
     );
