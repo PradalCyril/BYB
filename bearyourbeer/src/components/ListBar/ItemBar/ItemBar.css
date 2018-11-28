@@ -1,22 +1,21 @@
-
 .item-bar{
     list-style: none;
     background-color: #F6F6F6;
     border-radius: 10px;
     margin: 3em 0;
     box-shadow: 0 10px 60px 0px rgba(0,0,0,.13);
-
+    position: relative;
 }
-
 .item-bar-container{
     display: flex;
     width: 100%;
+
 }
 .img-bar-container{
     position: relative;
-    width: 18%;
-    padding-bottom: 18%;
-    min-width: 18%;
+    width: 30%;
+    padding-bottom: 30%;
+    min-width: 30%;
     overflow: hidden;
     align-self: center;
     border-radius: 50%;
@@ -31,7 +30,6 @@
     max-width: 150%;
     max-height: 150%;
 }
-
 .text-bar-container{
     position: relative;
     width: 100%;
@@ -39,27 +37,23 @@
     margin-left: 3em;
     align-self: center;
 }
-
 .title-bar{
     color: #707070;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 35px;
+    font-size: 1.2em;
     margin-bottom: 0;
     margin-top: 0;
 }
-
-
 .star-svg svg{
-    width: 25px;
+    width: 18px;
     padding: 0 .3em;
 }
 .adresse-bar{
     margin-top: .5em;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #696C73;
 }
-
 .point-bar{
     text-align: right;
     position: absolute;
@@ -68,27 +62,72 @@
     top: .7em;
     font-weight: 400;
 }
-
 .opening-green{
     color:#fff;
     background-color: #47AD17;
     border: solid 4px #318909;
     padding: .2em .5em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
     margin-top:0;
     margin-bottom: 0;
 }
+#canvas {
 
+}
+
+.canvas-container{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
 .opening-red{
     color:#fff;
     background-color: #DA2627;
     border: solid 4px #AF151D;
     padding: .2em .5em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
     margin-top:0;
     margin-bottom: 0;
+}
+@media screen and (min-width: 750px){
+    .img-bar-container{
+        position: relative;
+        width: 22%;
+        padding-bottom: 22%;
+        min-width: 22%;
+        overflow: hidden;
+        align-self: center;
+        border-radius: 50%;
+        box-shadow: 0 20px 50px 5px rgba(0,0,0,.23);
+        margin-left: 5%;
+        transform: translateY(-30px);
+   }
+    .star-svg svg{
+        width: 25px;
+        padding: 0 .3em;
+   }
+    .opening-red{
+        font-size: 1.4em;
+   }
+    .opening-green{
+        font-size: 1.4em;
+   }
+    .title-bar{
+        font-size: 1.5em;
+        margin-bottom: 0;
+        margin-top: 0;
+   }
+    .adresse-bar{
+        font-size: 1.2em;
+   }
+}
+@media screen and (min-width: 1080px){
+    .title-bar{
+        font-size: 2.2em;
+   }
 }

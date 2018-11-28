@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./ListBar.css"
 import ItemBar from "./ItemBar/ItemBar";
-
 class ListBar extends Component {
 
   constructor(props) {
@@ -29,7 +28,6 @@ class ListBar extends Component {
         this.countbar()
       }
       )
-
   }
 
   countbar() {
@@ -46,9 +44,11 @@ class ListBar extends Component {
     ))
 
     return (
-      <div className="container-list-bar">
+      <div className="relative">
+      <div className="list-bar--container">
         <p className="list-bar--title">We found {this.state.numberBar} bars you could be interested in.</p>
         {itemBar}
+      </div>
       </div>
     )
   }

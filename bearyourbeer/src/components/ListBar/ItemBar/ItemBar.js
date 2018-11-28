@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './ItemBar.css';
+import Bubles from '../../FirstPage/bubles'
 
 class ItemBar extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class ItemBar extends Component {
     componentDidMount() {
         this.star()
         this.opening()
+        Bubles.init(this.canvas);
     }
 
     star() {
@@ -68,6 +70,9 @@ class ItemBar extends Component {
         return (
             <li className="item-bar">
                 <div className="item-bar-container">
+                    <div className="canvas-container">
+                        <canvas ref={(el) => { this.canvas = el }} id="canvas"></canvas>
+                    </div>
                     <div className="img-bar-container">
                         <img className="img-bar" src={this.state.initialLink + this.state.imgWidth + this.state.reference} alt={this.state.name} />
                     </div>
