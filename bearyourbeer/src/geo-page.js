@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
+import SimpleMap from './components/map/SimpleMap';
 class Geo-page extends Component {
+	super(props)
     render() {
         return (
             <div>
-		Geo-page
-              </div>
+		<SimpleMap location={this.props.location} />
+            </div>
         );
     }
 }
