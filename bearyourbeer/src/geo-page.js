@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
-class Geo_page extends Component {
+class Geo-page extends Component {
     render() {
         return (
             <div>
