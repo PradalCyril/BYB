@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import {  getLocation } from './API';
 import ouvrebouteille from './ouvrebouteille2.svg';
 import pin1 from './pin1.svg';
 import pin2 from './pin2.svg';
@@ -41,22 +40,18 @@ class SimpleMap extends Component {
 		zoom: 12
 
 	}
-	componentDidMount() {
-		getLocation()
-			.then(location => {
-				this.setState({
-					location,
-					haveUsersLocation: true,
-					zoom: 16
-				});
+	componentWillMount() {		
+		tick() {
+			this.setState({
+				position: [this.props.data.lat, this.props.data.long]
 			});
+		}	
 
 	}
 
 	render() {
 		const position = [this.state.location.lat, this.state.location.lng];
 		return (
-			// Important! Always set the container height explicitly
 			<div style={{ height: '100vh', width: '100%' }}>
 			<GoogleMapReact
 			bootstrapURLKeys={{ key:"AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I" }}
@@ -115,8 +110,6 @@ class SimpleMap extends Component {
 			lat={this.props.location[9].geometry.location.lat}
 			lng={this.props.location[9].geometry.location.lng}
 			/>
-
-
 			</GoogleMapReact>
 			</div>
 		);
