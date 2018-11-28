@@ -33,47 +33,10 @@ class SimpleMap extends Component {
 			lat: -84.3905373,
 			lng: -170.2775355
 		},
-		bar1: {
+		polesud: {
 			lat: -84.3905373,
 			lng: -170.2775355
 		},
-		bar2: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar3: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar4: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar5: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar6: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar7: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar8: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar9: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-		bar10: {
-			lat: -84.3905373,
-			lng: -170.2775355
-		},
-
 		haveUsersLocation: false,
 		zoom: 12
 
@@ -105,44 +68,52 @@ class SimpleMap extends Component {
 			lng={this.state.location.lng}
 			/>
 			<AnyReactComponent1
-			lat={this.props.bar1.lat}
-			lng={this.props.bar1.lng}
-			/>
+			lat={this.props.location[0].geometry.location.lat}
+			lng={this.props.location[0].geometry.location.lng}
+			>
 			<AnyReactComponent2
-			lat={this.props.bar2.lat}
-			lng={this.props.bar2.lng}
+			lat={this.props.location[1].geometry.location.lat}
+			lng={this.props.location[1].geometry.location.lng}
+
 			/>
 			<AnyReactComponent3
-			lat={this.props.bar3.lat}
-			lng={this.props.bar3.lng}
+			lat={this.props.location[2].geometry.location.lat}
+			lng={this.props.location[2].geometry.location.lng}
+
 			/>
 			<AnyReactComponent4
-			lat={this.props.bar4.lat}
-			lng={this.props.bar4.lng}
+			lat={this.props.location[3].geometry.location.lat}
+			lng={this.props.location[3].geometry.location.lng}
+
 			/>
 			<AnyReactComponent5
-			lat={this.props.bar5.lat}
-			lng={this.props.bar5.lng}
+			lat={this.props.location[4].geometry.location.lat}
+			lng={this.props.location[4].geometry.location.lng}
+
 			/>
 			<AnyReactComponent6
-			lat={this.props.bar6.lat}
-			lng={this.props.bar6.lng}
+			lat={this.props.location[5].geometry.location.lat}
+			lng={this.props.location[5].geometry.location.lng}
+
 			/>
 			<AnyReactComponent7
-			lat={this.props.bar7.lat}
-			lng={this.props.bar7.lng}
+			lat={this.props.location[6].geometry.location.lat}
+			lng={this.props.location[6].geometry.location.lng}
+
 			/>
 			<AnyReactComponent8
-			lat={this.props.bar8.lat}
-			lng={this.props.bar8.lng}
+			lat={this.props.location[7].geometry.location.lat}
+			lng={this.props.location[7].geometry.location.lng}
+
 			/>
 			<AnyReactComponent9
-			lat={this.props.bar9.lat}
-			lng={this.props.bar9.lng}
+			lat={this.props.location[8].geometry.location.lat}
+			lng={this.props.location[8].geometry.location.lng}
+
 			/>
 			<AnyReactComponent10
-			lat={this.props.bar10.lat}
-			lng={this.props.bar10.lng}
+			lat={this.props.location[9].geometry.location.lat}
+			lng={this.props.location[9].geometry.location.lng}
 			/>
 
 
