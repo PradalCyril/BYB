@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SimpleMap from './components/geomap/SimpleMap';
+import SimpleMap from './components/Geomap/SimpleMap';
 class Geo-page extends Component {
 	super(props)
     render() {
