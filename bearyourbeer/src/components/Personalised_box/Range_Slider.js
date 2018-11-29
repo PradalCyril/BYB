@@ -7,20 +7,16 @@ import SearchBox from '../SearchBox/SearchBox'
 class Range_slider extends Component {
     constructor(props) {
         super(props);
-        this.handLeChange= this.handLeChange.bind(this);
     }
 
-    handLeChange(e){
-        this.props.onChangeValue(e.target.value)
-    }
     render() {
 
         return (
-            <div>
-                <div className="perso-box">
+            <React.Fragment>
+                <div className="perso-box user-input">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
-                            <li className="li-titre" id="titre">{"Beer Distance"}</li>
+                            <li className="li-titre" id="titre">Beer Distance (km)</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -41,7 +37,7 @@ class Range_slider extends Component {
                     </div>
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue2(ev)}>
-                            <li className="li-titre" id="titre">{"Distance from the course : (km)"}</li>
+                            <li className="li-titre" id="titre">Distance from the course : (km)</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -62,7 +58,7 @@ class Range_slider extends Component {
                     </div>
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue3(ev)}>
-                            <li className="li-titre" id="titre">{"Nomber of Bars : "}</li>
+                            <li className="li-titre" id="titre">Nomber of Bars :</li>
                             <li className="li-slider">
                                 <ul className="range-slider">
                                     <li className="li-output">
@@ -82,18 +78,18 @@ class Range_slider extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="search-box">
-                    <SearchBox />
+                <div className="search-box user-input">
+                    <SearchBox destination="addresspage" />
                 </div>
 
-            </div>
+            </React.Fragment>
         )
     }
 
     sliderValue1(ev) {
-        this.props.onChangeValue1(ev.target.value)
+        this.props.sliderCallback('beerDistance', ev.target.value)
         this._result1.value = ev.target.value;
-        this.setState({ uservalue1: ev.target.value })
+        this.setState({ beerDistance: ev.target.value })
         let difference = this._inpout1.max - this._inpout1.min
         let moinsdifference = 0 - this._inpout1.min
         let nbPixels = 100 / difference
@@ -102,9 +98,9 @@ class Range_slider extends Component {
 
     }
     sliderValue2(ev) {
-        this.props.onChangeValue2(ev.target.value)
+        this.props.sliderCallback('distance', ev.target.value)
         this._result2.value = ev.target.value;
-        this.setState({ uservalue2: ev.target.value })
+        this.setState({ distance: ev.target.value })
         let difference = this._inpout2.max - this._inpout2.min
         let moinsdifference = 0 - this._inpout2.min
         let nbPixels = 100 / difference
@@ -112,9 +108,9 @@ class Range_slider extends Component {
 
     }
     sliderValue3(ev) {
-        this.props.onChangeValue3(ev.target.value)
+        this.props.sliderCallback('nbBar', ev.target.value)
         this._result3.value = ev.target.value;
-        this.setState({ uservalue3: ev.target.value })
+        this.setState({ nbBar: ev.target.value })
         let difference = this._inpout3.max - this._inpout3.min
         let moinsdifference = 0 - this._inpout3.min
         let nbPixels = 100 / difference

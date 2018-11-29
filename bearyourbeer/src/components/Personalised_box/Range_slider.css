@@ -1,24 +1,15 @@
-.perso-box{
+.user-input{
     padding: 10px;
     width:150px;
     background-color: white;
-    border-style: solid;
-    border-color: white;
-    border-radius:10px;
+    border: solid 1px white;
+    border-radius: 10px 10px 0px 0px;
     margin-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    
     
 }
 .search-box{
-    padding: 10px;
-    width:150px;
-    background-color: white;
-    border-style: solid;
-    border-color: white;
-    border-radius:10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    
     border-top-color: black;
     border-top-width: 1px;
    
@@ -33,13 +24,9 @@ ul{
 }
 li{
     width:150px;
-    list-style-type: none;
-    font-family: 'Raleway', sans-serif;
+    list-style: none;
 }
-.mdr{
-    font-size: 0.75em;
-    margin-bottom: 1em;
-}
+
 .min-max-slider{
     display: flex;
     justify-content: space-between;
@@ -53,31 +40,18 @@ li{
     width: 115px;
     font-size: 0.75em;
 }
-#result1 {
+#result1, #result2, #result3 {
     position: relative;
     color: rgb(110, 110, 110);
 }
-#result2 {
-    position: relative;
-    color: rgb(110, 110, 110);
-}
-#result3 {
-    position: relative;
-    color: rgb(110, 110, 110);
-}
+
 
 
 input {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     background: none;
     cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 100%;
     min-height: 15px;
@@ -100,7 +74,6 @@ input {
   input::-webkit-slider-thumb {
     height: 14px;
     width: 14px;
-    -webkit-appearance: none;
     appearance: none;
     background: white;
     border-radius: 8px;
