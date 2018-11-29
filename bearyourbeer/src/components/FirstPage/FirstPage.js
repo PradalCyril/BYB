@@ -49,10 +49,6 @@ class FirstPage extends Component {
                                                                 
                                 <SearchBox />
                                 
-                                
-                                <NavLink to="/addresspage" className="bouton_go button">Go</NavLink>
-                                
-                            </form>
                         </div>
                 </div>
             </div>
