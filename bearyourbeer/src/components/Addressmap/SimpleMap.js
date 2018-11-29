@@ -41,7 +41,7 @@ class SimpleMap extends Component {
 
 	}
 	componentWillMount() {		
-		tick() {
+		loc() {
 			this.setState({
 				position: [this.props.data.lat, this.props.data.long]
 			});
