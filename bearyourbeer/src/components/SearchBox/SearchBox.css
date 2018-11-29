@@ -1,0 +1,26 @@
+.custom_input {
+    border: none;
+    border-bottom: 2px solid #999;
+    width: 100%;
+    max-width: 220px;
+    padding: 20px 0;
+    line-height: 1em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.autocomplete-dropdown-container {
+    position: absolute;
+}
+
+.bouton_go {
+    margin-left: 15px;
+    border: 2px solid;
+    border-color: #999;
+    color: black;
+}
+
+.flex_content {
+    display: flex;
+}
+
