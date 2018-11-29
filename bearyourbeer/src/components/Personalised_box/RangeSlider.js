@@ -4,15 +4,12 @@ import './Range_slider.css';
 import SearchBox from '../SearchBox/SearchBox'
 
 
-class Range_slider extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+class RangeSlider extends Component {
     render() {
 
         return (
             <React.Fragment>
+                <div className="container-slider">
                 <div className="perso-box user-input">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
@@ -81,7 +78,7 @@ class Range_slider extends Component {
                 <div className="search-box user-input">
                     <SearchBox destination="addresspage" />
                 </div>
-
+                </div>
             </React.Fragment>
         )
     }
@@ -121,4 +118,4 @@ class Range_slider extends Component {
 
 }
 
-export default Range_slider;
+export default RangeSlider;
