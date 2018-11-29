@@ -38,9 +38,7 @@ class FirstPage extends Component {
                             Where do you start?
                           
                         </p>
-                        <DataConsumer >
-                            {context => <p>{context.lat}-{context.long}</p>}
-                        </DataConsumer>
+
                     </div>
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
