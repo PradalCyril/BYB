@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './FirstPage.css';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
-
+import Waypoints from '../waypoints/index';
 
 
 class FirstPage extends Component {
@@ -47,7 +47,7 @@ class FirstPage extends Component {
                             {/* _________Bouton "entrer adresse"_________ */}
                                                                 
                                 <SearchBox />
-                                
+                                <Waypoints />
                                 
 
                         </div>
