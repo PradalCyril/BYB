@@ -8,36 +8,13 @@ class Waypoints extends Component {
             waypoints:[],
             bar: "",
             nbBar: 3,
-            dataBars: [{
-                geometry: {
-                    location: {
-                        lat: 50.8469892,
-                        long: 4.35323870000002
-                    }
-                }
-            }, {
-                geometry: {
-                    location: {
-                        lat: 50.8484223,
-                        long: 4.351250599999958
-                    }
-                }
-            }, {
-                geometry: {
-                    location: {
-                        lat: 50.8484703,
-                        long: 4.353890500000034
-                    }
-                }
-            }
-
-            ]
+            dataBars: []
         }
     }
 
 
 componentDidMount() {
-    fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=50.8478332,4.3601075000000264&destination=50.8478332,4.3601075000000264&waypoints=optimize:true|${this.state.bar}&mode=walking&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`)
+    fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${},${}&destination=${},${}&waypoints=optimize:true|${this.state.bar}&mode=walking&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`)
     .then(reponse => reponse.json())
     .then((data) => {this.setState({waypoints: data})})
 }
