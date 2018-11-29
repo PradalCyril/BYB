@@ -79,7 +79,7 @@ class Range_slider extends Component {
                     </div>
                 </div>
                 <div className="search-box user-input">
-                    <SearchBox />
+                    <SearchBox destination="addresspage" />
                 </div>
 
             </React.Fragment>
@@ -87,7 +87,7 @@ class Range_slider extends Component {
     }
 
     sliderValue1(ev) {
-        this.props.onChangeValue1(ev.target.value)
+        this.props.sliderCallback('beerDistance', ev.target.value)
         this._result1.value = ev.target.value;
         this.setState({ beerDistance: ev.target.value })
         let difference = this._inpout1.max - this._inpout1.min
@@ -98,7 +98,7 @@ class Range_slider extends Component {
 
     }
     sliderValue2(ev) {
-        this.props.onChangeValue2(ev.target.value)
+        this.props.sliderCallback('distance', ev.target.value)
         this._result2.value = ev.target.value;
         this.setState({ distance: ev.target.value })
         let difference = this._inpout2.max - this._inpout2.min
@@ -108,7 +108,7 @@ class Range_slider extends Component {
 
     }
     sliderValue3(ev) {
-        this.props.onChangeValue3(ev.target.value)
+        this.props.sliderCallback('nbBar', ev.target.value)
         this._result3.value = ev.target.value;
         this.setState({ nbBar: ev.target.value })
         let difference = this._inpout3.max - this._inpout3.min
