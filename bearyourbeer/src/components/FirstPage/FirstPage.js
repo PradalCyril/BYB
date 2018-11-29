@@ -3,7 +3,7 @@ import './FirstPage.css';
 import { NavLink } from 'react-router-dom';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
-//import Footer from '../Footer/index'
+import Footer from '../Footer/index'
 
 
 
