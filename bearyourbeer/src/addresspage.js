@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 //import SimpleMap from './components/Addressmap/SimpleMap';
-import Range_slider from './components/Personalised_box/Range_Slider';
-
+import RangeSlider from './components/Personalised_box/RangeSlider';
+import BarOnMap from './components/Bar_on_map/index'
 class Addresspage extends Component {
     render() {
         return (
             <div>
-                <Range_slider
+                <RangeSlider
                     latLngCallback={(data) => this.props.latLngCallback(data)}
                     sliderCallback={(dataType, data) => this.props.sliderCallback(dataType, data)}
                 />
                 <BarOnMap
                     getBars={bar => this.props.getBars(bar)}
-                    userLatLng={this.props.latLng}
-                    userdistance={this.props.beerDistance}
+                    userLatLng={this.props.data.latLng}
+                    userdistance={this.props.data.beerDistance}
                 />
                 {/*<SimpleMap location={this.props.location} addressloc={this.props.data}/>*/}
             </div>

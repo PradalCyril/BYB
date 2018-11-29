@@ -4,11 +4,7 @@ import './Range_slider.css';
 import SearchBox from '../SearchBox/SearchBox'
 
 
-class Range_slider extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+class RangeSlider extends Component {
     render() {
 
         return (
@@ -121,4 +117,4 @@ class Range_slider extends Component {
 
 }
 
-export default Range_slider;
+export default RangeSlider;

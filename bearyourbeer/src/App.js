@@ -8,7 +8,7 @@ import { DataProvider } from "./components/ContextApi/DataContext";
 import './App.css';
 
 
-import BarOnMap from './components/Bar_on_map/index'
+
 
 
 class App extends Component {
@@ -54,7 +54,7 @@ class App extends Component {
             latLngCallback={(data) => this.getLatlng(data)} 
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
-            getBars={bar => this.props.getBars(bar)} />}/>
+            getBars={bar => this.getBars(bar)} />}/>
           </Switch>
         </DataProvider>
 
