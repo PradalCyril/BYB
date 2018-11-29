@@ -40,7 +40,7 @@ class FirstPage extends Component {
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
                         <div className="btn_geoloc_content">
-                            <NavLink to="/Geo_page" className="btn_geoloc button"> Geo-Localize me !</NavLink>
+                            <NavLink to="/geopage" className="btn_geoloc button"> Geo-Localize me !</NavLink>
 
                             <p className="or">Or</p>
 
@@ -50,7 +50,7 @@ class FirstPage extends Component {
                                 <SearchBox />
                                 
                                 
-                                <NavLink to="/Address_page" className="bouton_go button">Go</NavLink>
+                                <NavLink to="/addresspage" className="bouton_go button">Go</NavLink>
                                 
                             </form>
                         </div>
