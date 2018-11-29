@@ -27,7 +27,7 @@ class App extends Component {
     this.setState({bars: bar})
   }
   handleSliderData(dataType, data){
-    this.setState({ dataType: data });
+    this.setState({ [dataType]: data });
   }
 
   getLatlng(data) {
@@ -35,7 +35,9 @@ class App extends Component {
       latLng: data
     })
   }
-
+componentDidUpdate(){
+  console.log(this.state.bars)
+}
   render() {
     return (
       <div>
@@ -48,7 +50,8 @@ class App extends Component {
             render={props => <Geopage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
-            data={this.state} />} />
+            data={this.state}
+            getBars={bar => this.getBars(bar)} />} />
             <Route path="/addresspage" 
             render={props => <Addresspage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
