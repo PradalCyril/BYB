@@ -70,7 +70,7 @@ class SearchBox extends Component {
           
         </PlacesAutocomplete>
 
-        <NavLink onClick={() => this.props.callback(this.state.latLng)} className="bouton_go button" to="/addresspage">Go</NavLink>
+        <NavLink onClick={() => this.props.latLngCallback(this.state.latLng)} className="bouton_go button" to={`/${this.props.destination}`}>Go</NavLink>
         </div>
       );
     }
