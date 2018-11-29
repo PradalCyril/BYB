@@ -40,13 +40,6 @@
     margin-top: 50px;
 }
 
-.bouton_go {
-    margin-left: 15px;
-    border: 2px solid;
-    border-color: #999;
-    color: black;
-}
-
 .localise-form{
     display: flex;
 }
@@ -67,7 +60,7 @@
 
 }
 
-#canvas {
+.canvas {
     width: 100vw;
     height: 100vh;
     max-width: 100%;
@@ -94,7 +87,7 @@
     align-items: flex-end;
 
     }
-    #canvas {
+    .canvas {
         display: block;
     }
 }
