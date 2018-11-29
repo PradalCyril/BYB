@@ -13,7 +13,7 @@ class Range_slider extends Component {
 
         return (
             <React.Fragment>
-                <div className="perso-box">
+                <div className="perso-box user-input">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
                             <li className="li-titre" id="titre">Beer Distance (km)</li>
@@ -78,7 +78,7 @@ class Range_slider extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="search-box">
+                <div className="search-box user-input">
                     <SearchBox />
                 </div>
 

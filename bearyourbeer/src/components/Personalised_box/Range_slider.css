@@ -1,24 +1,15 @@
-.perso-box{
+.user-input{
     padding: 10px;
     width:150px;
     background-color: white;
-    border-style: solid;
-    border-color: white;
-    border-radius:10px;
+    border: solid 1px white;
+    border-radius: 10px 10px 0px 0px;
     margin-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    
     
 }
 .search-box{
-    padding: 10px;
-    width:150px;
-    background-color: white;
-    border-style: solid;
-    border-color: white;
-    border-radius:10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    
     border-top-color: black;
     border-top-width: 1px;
    
@@ -33,8 +24,7 @@ ul{
 }
 li{
     width:150px;
-    list-style-type: none;
-    font-family: 'Raleway', sans-serif;
+    list-style: none;
 }
 
 .min-max-slider{
