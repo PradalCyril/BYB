@@ -3,7 +3,7 @@ import './FirstPage.css';
 import { NavLink } from 'react-router-dom';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
-import { DataConsumer } from '../ContextApi/DataContext';
+//import Footer from '../Footer/index'
 
 
 
@@ -52,6 +52,7 @@ class FirstPage extends Component {
                                                                 
                             <SearchBox latLngCallback={(data) => this.props.latLngCallback(data)} destination="addresspage"/>
                                 
+                            <Footer />
                         </div>
                 </div>
             </div>
