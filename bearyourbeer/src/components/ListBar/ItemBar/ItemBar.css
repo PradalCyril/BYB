@@ -30,6 +30,8 @@
     position: absolute;
     max-width: 150%;
     max-height: 150%;
+    top: 0;
+    left: 0;
 }
 .text-bar-container{
     position: relative;
@@ -63,19 +65,23 @@
     top: .7em;
     font-weight: 400;
 }
-.opening-green{
+.opening-bar{
     color:#fff;
-    background-color: #47AD17;
-    border: solid 4px #318909;
     padding: .2em .5em;
     font-size: 1.1em;
     font-weight: 600;
     display: inline-block;
     margin-top:0;
-    margin-bottom: 0;
+    margin-bottom: 0; 
 }
-#canvas {
+.opening-green{
+    background-color: #47AD17;
+    border: solid 4px #318909;
+}
 
+.opening-red{
+    background-color: #DA2627;
+    border: solid 4px #AF151D;
 }
 
 .canvas-container{
@@ -84,17 +90,7 @@
     height: 100%;
     overflow: hidden;
 }
-.opening-red{
-    color:#fff;
-    background-color: #DA2627;
-    border: solid 4px #AF151D;
-    padding: .2em .5em;
-    font-size: 1.1em;
-    font-weight: 600;
-    display: inline-block;
-    margin-top:0;
-    margin-bottom: 0;
-}
+
 @media screen and (min-width: 750px){
     .img-bar-container{
         position: relative;

@@ -7,16 +7,13 @@ class ListBar extends Component {
     super(props);
     this.state = {
       bar: [],
-      numberBar: "2",
       star: []
     };
-
-    this.countbar = this.countbar.bind(this);
   }
 
 
   componentDidMount() {
-    this.setState({ isLoading: true });
+
     fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I', {
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -25,17 +22,9 @@ class ListBar extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({ bar: data.results })
-        this.countbar()
       }
       )
   }
-
-  countbar() {
-    const constNumberBar = this.state.bar.length;
-    this.setState({ numberBar: constNumberBar });
-  }
-
- 
 
   render() {
 
@@ -46,7 +35,7 @@ class ListBar extends Component {
     return (
       <div className="relative">
       <div className="list-bar--container">
-        <p className="list-bar--title">We found {this.state.numberBar} bars you could be interested in.</p>
+        <p className="list-bar--title">We found {this.state.bar.length} bars you could be interested in.</p>
         {itemBar}
       </div>
       </div>

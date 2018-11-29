@@ -86,7 +86,7 @@ class ItemBar extends Component {
                              + this.state.star[4]
                              }} />
                         <p className="adresse-bar">{this.state.adress}</p>
-                        <p className={this.state.colorOpen}>{this.state.open}</p>
+                        <p className={ "opening-bar " + this.state.colorOpen}>{this.state.open}</p>
                         
                     </div>
                 </div>
