@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SimpleMap from './components/Addressmap/SimpleMap';
-class Address-page extends Component {
+class Addresspage extends Component {
         super(props)
     render() {
         return (
@@ -11,5 +11,5 @@ class Address-page extends Component {
     }
 }
 
-export default Address-page;
+export default Addresspage;
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SimpleMap from './components/Geomap/SimpleMap';
-class Geo-page extends Component {
+class Geopage extends Component {
 	super(props)
     render() {
         return (
@@ -11,4 +11,4 @@ class Geo-page extends Component {
     }
 }
 
-export default Geo_page;
+export default Geopage;
