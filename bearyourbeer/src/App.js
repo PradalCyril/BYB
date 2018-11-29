@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
@@ -40,6 +41,15 @@ componentDidUpdate(){
 }
   render() {
     return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div>
+      <ListBar/>
+    </div>
+=======
+
+>>>>>>> e6b4dbb0bae045d630c955d3e7dcc19400385fba
       <div>
         <DataProvider value={this.state.latLng}>
 
@@ -62,6 +72,7 @@ componentDidUpdate(){
         </DataProvider>
 
       </div>
+>>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
     );
   }
 }

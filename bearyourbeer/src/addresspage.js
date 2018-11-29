@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListBar from './components/ListBar/ListBar'
 //import SimpleMap from './components/Addressmap/SimpleMap';
 import RangeSlider from './components/Personalised_box/RangeSlider';
 import BarOnMap from './components/Bar_on_map/index'
@@ -35,10 +36,11 @@ class Addresspage extends Component {
                     userdistance={this.props.data.beerDistance}
                 />
                 {/*<SimpleMap location={this.props.location} addressloc={this.props.data}/>*/}
+                <ListBar />
             </div>
         );
     }
-}
+}s
 
 export default Addresspage;
 

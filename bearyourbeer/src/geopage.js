@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RangeSlider from './components/Personalised_box/RangeSlider';
-import BarOnMap from './components/Bar_on_map/index'
+import ListBar from './components/ListBar/ListBar'
 //import SimpleMap from './components/Geomap/SimpleMap';
 let userRadius=1000;
 class Geopage extends Component {
@@ -32,6 +32,7 @@ class Geopage extends Component {
 
                 />
                 {/*<SimpleMap location={this.props.location} addressloc={this.props.data}/>*/}
+                <ListBar />
             </div>
         );
     }
