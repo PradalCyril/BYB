@@ -41,15 +41,6 @@ componentDidUpdate(){
 }
   render() {
     return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div>
-      <ListBar/>
-    </div>
-=======
-
->>>>>>> e6b4dbb0bae045d630c955d3e7dcc19400385fba
       <div>
         <DataProvider value={this.state.latLng}>
 
@@ -72,7 +63,7 @@ componentDidUpdate(){
         </DataProvider>
 
       </div>
->>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
+
     );
   }
 }
