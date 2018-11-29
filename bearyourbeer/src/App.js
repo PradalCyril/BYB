@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import './App.css';
-import ListBar from './components/ListBar/ListBar'
-
-=======
 import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
 import Addresspage from './addresspage';
 import { DataProvider } from "./components/ContextApi/DataContext";
->>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
 
 import './App.css';
+
+
+
+
 
 class App extends Component {
   constructor(props) {
@@ -20,12 +19,16 @@ class App extends Component {
       beerDistance: 1,
       distance: 2,
       nbBar: 3,
-      latLng: {}
+      latLng: {},
+      bars: []
     }
   }
 
+  getBars(bar){
+    this.setState({bars: bar})
+  }
   handleSliderData(dataType, data){
-    this.setState({ dataType: data });
+    this.setState({ [dataType]: data });
   }
 
   getLatlng(data) {
@@ -33,14 +36,11 @@ class App extends Component {
       latLng: data
     })
   }
+componentDidUpdate(){
+  console.log(this.state.bars)
+}
   render() {
     return (
-<<<<<<< HEAD
-      <div>
-      <ListBar/>
-    </div>
-=======
-
       <div>
         <DataProvider value={this.state.latLng}>
 
@@ -50,16 +50,20 @@ class App extends Component {
             <Route path="/geopage" 
             render={props => <Geopage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
-            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)} />} />
+            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
+            data={this.state}
+            getBars={bar => this.getBars(bar)} />} />
             <Route path="/addresspage" 
             render={props => <Addresspage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
-            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}/>} />
+            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
+            data={this.state}
+            getBars={bar => this.getBars(bar)} />}/>
           </Switch>
         </DataProvider>
 
       </div>
->>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
+
     );
   }
 }
