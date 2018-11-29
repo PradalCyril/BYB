@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import './App.css';
-import ListBar from './components/ListBar/ListBar'
 
-=======
+
 import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
 import Addresspage from './addresspage';
 import { DataProvider } from "./components/ContextApi/DataContext";
->>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
-
-import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -35,11 +30,6 @@ class App extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <div>
-      <ListBar/>
-    </div>
-=======
 
       <div>
         <DataProvider value={this.state.latLng}>
@@ -59,7 +49,6 @@ class App extends Component {
         </DataProvider>
 
       </div>
->>>>>>> 02cede82e355c0a5f88eec205f183a4fc884bf59
     );
   }
 }
