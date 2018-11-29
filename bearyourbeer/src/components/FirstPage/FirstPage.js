@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FirstPage.css';
+import { NavLink } from 'react-router-dom';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
 import { DataConsumer } from '../ContextApi/DataContext';
@@ -44,20 +45,15 @@ class FirstPage extends Component {
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
                         <div className="btn_geoloc_content">
-                            <a className="btn_geoloc button" href="./component/page.html">Geo-Localize me !</a>
+                            <NavLink to="/geopage" className="btn_geoloc button"> Geo-Localize me !</NavLink>
 
                             <p className="or">Or</p>
 
 
                             {/* _________Bouton "entrer adresse"_________ */}
-                            <form className="localise-form" method="post">
-                                
-                                    
+                                                                
                             <SearchBox callback={(data) => this.props.callback(data)}/>
                                 
-            
-                                
-                            </form>
                         </div>
                 </div>
             </div>

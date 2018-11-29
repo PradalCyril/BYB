@@ -40,13 +40,6 @@
     margin-top: 50px;
 }
 
-.bouton_go {
-    margin-left: 15px;
-    border: 2px solid;
-    border-color: #999;
-    color: black;
-}
-
 .localise-form{
     display: flex;
 }

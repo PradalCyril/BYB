@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SearchBox.css';
+import { NavLink } from 'react-router-dom'
 import PlacesAutocomplete, {
     geocodeByAddress,
     getLatLng,
@@ -12,7 +13,7 @@ class SearchBox extends Component {
       super(props);
       this.state = { 
         address: '',
-        latLng : {} };
+      latLng : {} };
     }
   
     handleChange = address => {
@@ -23,7 +24,6 @@ class SearchBox extends Component {
       geocodeByAddress(address)
         .then(results => getLatLng(results[0]))
         .then(latLng => this.setState({ address: address, latLng: latLng }))
-        .catch(error => console.error('Error', error));
     };
     
     
@@ -70,7 +70,7 @@ class SearchBox extends Component {
           
         </PlacesAutocomplete>
 
-        <a className="bouton_go button" href="./component/page.html">Go</a>
+        <NavLink onClick={() => this.props.callback(this.state.latLng)} className="bouton_go button" to="/addresspage">Go</NavLink>
         </div>
       );
     }
