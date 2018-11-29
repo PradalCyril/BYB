@@ -3,6 +3,7 @@ import './FirstPage.css';
 import { NavLink } from 'react-router-dom';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
+import { DataConsumer } from '../ContextApi/DataContext';
 
 
 
@@ -35,7 +36,11 @@ class FirstPage extends Component {
 
                         <p className="welcome_txt">
                             Where do you start?
+                          
                         </p>
+                        <DataConsumer >
+                            {context => <p>{context.lat}-{context.long}</p>}
+                        </DataConsumer>
                     </div>
 
                         {/* _________Bouton "Geo-Localise moi"_________ */}
@@ -47,7 +52,7 @@ class FirstPage extends Component {
 
                             {/* _________Bouton "entrer adresse"_________ */}
                                                                 
-                                <SearchBox />
+                            <SearchBox callback={(data) => this.props.callback(data)}/>
                                 
                         </div>
                 </div>
