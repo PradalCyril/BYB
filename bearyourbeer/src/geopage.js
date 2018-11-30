@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import RangeSlider from './components/Personalised_box/RangeSlider';
 import ListBar from './components/ListBar/ListBar'
+import Waypoints from './components/waypoints/index';
+
+
 //import SimpleMap from './components/Geomap/SimpleMap';
 let userRadius=1000;
 class Geopage extends Component {
@@ -25,7 +28,9 @@ class Geopage extends Component {
     
     render() {
         return (
+
             <div>
+                <Waypoints callback={this.props.data}/>
                 <RangeSlider
                     latLngCallback={(data) => this.props.latLngCallback(data)}
                     sliderCallback={(dataType, data) => this.props.sliderCallback(dataType, data)}

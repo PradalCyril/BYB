@@ -6,7 +6,6 @@ import Geopage from './geopage';
 import Addresspage from './addresspage';
 import { DataProvider } from "./components/ContextApi/DataContext";
 
-import './App.css';
 
 
 

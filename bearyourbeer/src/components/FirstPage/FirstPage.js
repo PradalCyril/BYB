@@ -3,12 +3,8 @@ import './FirstPage.css';
 import { NavLink } from 'react-router-dom';
 import Bubles from './bubles'
 import SearchBox from '../SearchBox/SearchBox';
-<<<<<<< HEAD
-import Waypoints from '../waypoints/index';
-=======
 import { DataConsumer } from '../ContextApi/DataContext';
 
->>>>>>> b1867b4171d72d4cb23b808a0735596aece99f27
 
 
 class FirstPage extends Component {
@@ -56,15 +52,10 @@ class FirstPage extends Component {
 
                             {/* _________Bouton "entrer adresse"_________ */}
                                                                 
-<<<<<<< HEAD
                                 <SearchBox />
-                                <Waypoints />
+                                
                                 
 
-=======
-                            <SearchBox latLngCallback={(data) => this.props.latLngCallback(data)} destination="addresspage"/>
-                                
->>>>>>> b1867b4171d72d4cb23b808a0735596aece99f27
                         </div>
                 </div>
             </div>

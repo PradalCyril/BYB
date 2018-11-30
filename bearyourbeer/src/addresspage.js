@@ -40,7 +40,7 @@ class Addresspage extends Component {
             </div>
         );
     }
-}s
+}
 
 export default Addresspage;
 
