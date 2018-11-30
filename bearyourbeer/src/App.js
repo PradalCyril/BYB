@@ -19,11 +19,12 @@ class App extends Component {
       distance: 2,
       nbBar: 3,
       latLng: {},
-      bars: []
+      bars: ['first']
     }
   }
 
   getBars(bar){
+    console.log('bar', bar)
     this.setState({bars: bar})
   }
   handleSliderData(dataType, data){
@@ -35,9 +36,8 @@ class App extends Component {
       latLng: data
     })
   }
-componentDidUpdate(){
-  console.log(this.state.bars)
-}
+  
+
   render() {
     return (
       <div>

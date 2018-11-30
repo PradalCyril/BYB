@@ -52,7 +52,7 @@ class FirstPage extends Component {
 
                             {/* _________Bouton "entrer adresse"_________ */}
                                                                 
-                                <SearchBox />
+                            <SearchBox latLngCallback={(data) => this.props.latLngCallback(data)} destination="geopage"/>
                                 
                                 
 
