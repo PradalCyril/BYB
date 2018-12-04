@@ -14,8 +14,8 @@ class App extends Component {
 			geolocated: false,
 			Latlng: []
 		}
-		geocoords(str) {
-			this.setState({Latlng: str})
+		geocoords(coords) {
+			this.setState({Latlng: coords})
 		}
 	}
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
       <div>
 	    <Switch>
 		<Route exact path="/" component={FirstPage} />
-                  <Route path="/geopage" render={props => <Geopage location={this.state.bars} geolocated={this.state.geolocated} geocoords={(str) => (geocoords)} />} />
+                  <Route path="/geopage" render={props => <Geopage location={this.state.bars} geolocated={this.state.geolocated} geocoords={this.geocoords} />} />
                   <Route path="/addresspage" render={props => <Addresspage location={this.state.bars} addresslocation={this.state.data} />} />
 	    </Switch>
       </div>
