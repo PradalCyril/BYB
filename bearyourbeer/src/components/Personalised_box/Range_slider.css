@@ -41,6 +41,9 @@ ul{
     font-size: 0.75em;
 }
 
+.li-input{ 
+  overflow: hidden;
+}
 #result1, #result2, #result3 {
     position: relative;
     color: rgb(110, 110, 110);
