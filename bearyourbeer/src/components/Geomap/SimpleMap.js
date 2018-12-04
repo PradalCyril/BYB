@@ -45,6 +45,9 @@ class SimpleMap extends Component {
 						zoom: 16
 					});
 				});
+				.then(location => {
+					this.props.geocoords(location)
+				});
 		} 
 
 	}
