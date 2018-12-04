@@ -14,9 +14,15 @@ class App extends Component {
 			geolocated: false,
 			Latlng: []
 		}
+<<<<<<< HEAD
 	}
 	geocoords(str) {
 		this.setState({Latlng: str})
+=======
+		geocoords(coords) {
+			this.setState({Latlng: coords})
+		}
+>>>>>>> 50492d3ab2ffc64353a3fe463c0f9acccd9625fd
 	}
   render() {
     return (
