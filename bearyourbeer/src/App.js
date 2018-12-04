@@ -10,19 +10,18 @@ import FirstPage from './components/FirstPage/FirstPage'
 class App extends Component {
 	constructor(props){
 		this.geocoords = this.geocoords.bind(this);
+		this.handleGeo = this.handleGeo.bind(this);
 		this.state = {
 			geolocated: false,
 			Latlng: []
 		}
-<<<<<<< HEAD
 	}
 	geocoords(str) {
 		this.setState({Latlng: str})
-=======
-		geocoords(coords) {
-			this.setState({Latlng: coords})
-		}
->>>>>>> 50492d3ab2ffc64353a3fe463c0f9acccd9625fd
+	}
+
+	handleGeo(y){
+		this.setState({geolocated: y})
 	}
   render() {
     return (
