@@ -49,7 +49,7 @@ class SimpleMap extends Component {
 
 	}
 	render() {
-		this.state.pins.map(pin => { return (
+		this.setState.pins.map(pin => { return (
 			<svg width="42" height="35" xmlns="http://www.w3.org/2000/svg">
                         <g>
                         <title>background</title>
