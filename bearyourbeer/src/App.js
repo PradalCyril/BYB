@@ -27,6 +27,7 @@ class App extends Component {
   getBars(bar){
     this.setState({bars: bar})
   }
+
   handleSliderData(dataType, data){
     this.setState({ [dataType]: data });
   }
@@ -36,19 +37,17 @@ class App extends Component {
       latLng: data
     })
   }
+
   goUpTrajet(data) {
     this.setState({
       trajet: data
     })
   }
-componentDidUpdate(){
-  console.log(this.state.trajet)
-}
+
   render() {
     return (
       <div>
         <DataProvider value={this.state.latLng}>
-
           <Switch>
             <Route exact path="/" render={() => <FirstPage 
             latLngCallback={(data) => this.getLatlng(data)} />} />

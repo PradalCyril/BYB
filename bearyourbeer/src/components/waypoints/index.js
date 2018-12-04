@@ -5,7 +5,6 @@ class Waypoints extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
             bar: "",
         }
     }
@@ -17,11 +16,10 @@ class Waypoints extends Component {
         fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${this.props.data.latLng.lat},${this.props.data.latLng.lng}&destination=${this.props.data.latLng.lat},${this.props.data.latLng.lng}&waypoints=optimize:true|${this.state.bar}&mode=walking&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I`)
             .then(reponse => reponse.json())
             .then((data) => { this.props.goUpTrajet(data)  })
-
-
     }
 
     componentDidUpdate(prevProps) {
+        
         if (prevProps.data.nbBar !== this.props.data.nbBar) {
             let listBar = 0
 
@@ -44,7 +42,6 @@ class Waypoints extends Component {
 
         return (
             <div>
-
             </div>
         )
     }
