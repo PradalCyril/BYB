@@ -42,9 +42,7 @@ class Geopage extends Component {
             .then((data) => {
                 this.props.getBars(data.results)
             });
-        console.log(this.props.data)
     }
-
 
 
     render() {
@@ -59,7 +57,7 @@ class Geopage extends Component {
 
                 {this.state.waypointsReady &&
 
-                    <Waypoints data={this.props.data} />
+                    <Waypoints data={this.props.data} goUpTrajet={(data)=>this.props.goUpTrajet(data)} />
 
                 }
                 {/*<SimpleMap location={this.props.location} addressloc={this.props.data}/>*/}

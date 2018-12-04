@@ -19,12 +19,12 @@ class App extends Component {
       distance: 2,
       nbBar: 3,
       latLng: {},
-      bars: ['first']
+      bars: ['first'],
+      trajet: []
     }
   }
 
   getBars(bar){
-    console.log('bar', bar)
     this.setState({bars: bar})
   }
   handleSliderData(dataType, data){
@@ -36,8 +36,14 @@ class App extends Component {
       latLng: data
     })
   }
-  
-
+  goUpTrajet(data) {
+    this.setState({
+      trajet: data
+    })
+  }
+componentDidUpdate(){
+  console.log(this.state.trajet)
+}
   render() {
     return (
       <div>
@@ -51,7 +57,8 @@ class App extends Component {
             latLngCallback={(data) => this.getLatlng(data)} 
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
-            getBars={bar => this.getBars(bar)} />} />
+            getBars={bar => this.getBars(bar)}
+            goUpTrajet={(data)=>this.goUpTrajet(data)} />}/> 
             <Route path="/addresspage" 
             render={props => <Addresspage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
