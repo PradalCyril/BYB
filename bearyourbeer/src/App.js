@@ -8,12 +8,22 @@ import SearchBox from './components/SearchBox/SearchBox'
 import FirstPage from './components/FirstPage/FirstPage'
 
 class App extends Component {
+	constructor(props){
+		this.geocoords = this.geocoords.bind(this);
+		this.state = {
+			geolocated: false,
+			Latlng: []
+		}
+		geocoords(str) {
+			this.setState({Latlng: str})
+		}
+	}
   render() {
     return (
       <div>
 	    <Switch>
 		<Route exact path="/" component={FirstPage} />
-                  <Route path="/geopage" render={props => <Geopage location={this.state.bars} />} />
+                  <Route path="/geopage" render={props => <Geopage location={this.state.bars} geolocated={this.state.geolocated} geocoords={(str) => (geocoords)} />} />
                   <Route path="/addresspage" render={props => <Addresspage location={this.state.bars} addresslocation={this.state.data} />} />
 	    </Switch>
       </div>
