@@ -12,7 +12,7 @@ class App extends Component {
       beerDistance: 1,
       distance: 2,
       nbBar: 3,
-      latLng: {lat: 53.345, lng: 33.000},
+      latLng: {lat: 50.8467316, lng: 4.352413800000022},
       geolocated: true,
       coords: [],
       bars: ["salut"],
