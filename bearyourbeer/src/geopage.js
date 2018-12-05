@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import RangeSlider from './components/Personalised_box/RangeSlider';
 import ListBar from './components/ListBar/ListBar'
+import SimpleMap from './components/map/SimpleMap';
 import Waypoints from './components/waypoints/index';
-// import SimpleMap from './components/Geomap/SimpleMap';
 
 let userRadius = 1000;
 
 
 class Geopage extends Component {
+
 
     constructor(props) {
         super(props);
@@ -66,11 +67,8 @@ class Geopage extends Component {
                     latLngCallback={(data) => this.props.latLngCallback(data)}
                     sliderCallback={(dataType, data) => this.props.sliderCallback(dataType, data)}
                 />
-
                 {this.state.waypointsReady &&
-
                     <Waypoints data={this.props.data} goUpTrajet={(data) => this.props.goUpTrajet(data)} />
-
                 }
                 {/* <SimpleMap location={this.props.location} addressloc={this.props.data}/> */}
                 <ListBar data={this.props.data}/>
