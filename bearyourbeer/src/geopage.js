@@ -72,7 +72,7 @@ class Geopage extends Component {
 			latLngCallback={(data) => this.props.latLngCallback(data)}
 			sliderCallback={(dataType, data) => this.props.sliderCallback(dataType, data)}
 			/>
-			<SimpleMap latLngCallback={(data) => this.props.latLngCallback(data)} location={this.props.location} geolocated={this.props.geolocated} />
+			<SimpleMap latLngCallback={(data) => this.props.latLngCallback(data)} data={this.props.data} geolocated={this.props.geolocated} />
 			{this.state.waypointsReady &&
 				<Waypoints data={this.props.data} goUpTrajet={(data) => this.props.goUpTrajet(data)} />
 			}

@@ -26,7 +26,7 @@ class SimpleMap extends Component {
 		}
 	}
 	componentDidUpdate(prevProps) {
-		if (prevProps.location !== this.props.location) {
+		if (prevProps.data.bars !== this.props.data.bars) {
 			this.setState({locIsReady: true})
 		}
 	}
@@ -68,76 +68,76 @@ class SimpleMap extends Component {
 			lng={this.state.location.lng}
 			/>
 			{this.state.locIsReady &&
-				<div>
+				<React.Fragment>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[0]
 				}}
-				lat={this.props.location[0].geometry.location.lat}
-				lng={this.props.location[0].geometry.location.lng}
+				lat={this.props.data.bars[0].geometry.location.lat}
+				lng={this.props.data.bars[0].geometry.location.lng}
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[1]
 				}}
-				lat={this.props.location[1].geometry.location.lat}
-				lng={this.props.location[1].geometry.location.lng}
+				lat={this.props.data.bars[1].geometry.location.lat}
+				lng={this.props.data.bars[1].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[2]
 				}}
-				lat={this.props.location[2].geometry.location.lat}
-				lng={this.props.location[2].geometry.location.lng}
+				lat={this.props.data.bars[2].geometry.location.lat}
+				lng={this.props.data.bars[2].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[3]
 				}}
-				lat={this.props.location[3].geometry.location.lat}
-				lng={this.props.location[3].geometry.location.lng}
+				lat={this.props.data.bars[3].geometry.location.lat}
+				lng={this.props.data.bars[3].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[4]
 				}}
-				lat={this.props.location[4].geometry.location.lat}
-				lng={this.props.location[4].geometry.location.lng}
+				lat={this.props.data.bars[4].geometry.location.lat}
+				lng={this.props.data.bars[4].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[5]
 				}}
-				lat={this.props.location[5].geometry.location.lat}
-				lng={this.props.location[5].geometry.location.lng}
+				lat={this.props.data.bars[5].geometry.location.lat}
+				lng={this.props.data.bars[5].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[6]
 				}}
-				lat={this.props.location[6].geometry.location.lat}
-				lng={this.props.location[6].geometry.location.lng}
+				lat={this.props.data.bars[6].geometry.location.lat}
+				lng={this.props.data.bars[6].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[7]
 				}}
-				lat={this.props.location[7].geometry.location.lat}
-				lng={this.props.location[7].geometry.location.lng}
+				lat={this.props.data.bars[7].geometry.location.lat}
+				lng={this.props.data.bars[7].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[8]
 				}}
-				lat={this.props.location[8].geometry.location.lat}
-				lng={this.props.location[8].geometry.location.lng}
+				lat={this.props.data.bars[8].geometry.location.lat}
+				lng={this.props.data.bars[8].geometry.location.lng}
 
 				/>
 				<p dangerouslySetInnerHTML={{
 					__html: this.state.pins[9]
 				}}
-				lat={this.props.location[9].geometry.location.lat}
-				lng={this.props.location[9].geometry.location.lng}
+				lat={this.props.data.bars[9].geometry.location.lat}
+				lng={this.props.data.bars[9].geometry.location.lng}
 				/>
-				</div>
+				</React.Fragment>
 			}
 			</GoogleMapReact>
 			</div>
