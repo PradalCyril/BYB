@@ -1,12 +1,14 @@
 .container_first-page{
     height: 100%;
-    position: relative;    
+    position: relative; 
+       
 }
 
 .shape-bg{
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: 30%;
 }
 
 .container {
@@ -106,5 +108,10 @@
         max-width: 1280px;
     }
     
+}
+
+.footer {
+    position:absolute;
+   bottom:0;
 }
 

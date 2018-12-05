@@ -15,10 +15,15 @@
     display: flex;
 }
 
-svg{
-  height: 20px;
-  width:20px;  
+.fb-like {
+    width: 13px;
+    padding-right: 30px;
 }
+
+.tw-like {
+    width: 25px;
+}
+
 .sharebox {
     padding: 0.8vw 1vh;
     background-color: #3a3a3a;
