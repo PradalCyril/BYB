@@ -1,8 +1,9 @@
-s
+
 body {
     margin: 0;
     color: #3F4145;
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 0;
 }
 
 .title, .site-title {
