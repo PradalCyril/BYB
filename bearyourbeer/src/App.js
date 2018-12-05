@@ -7,10 +7,6 @@ import Addresspage from './addresspage';
 import { DataProvider } from "./components/ContextApi/DataContext";
 
 
-
-
-
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -67,7 +63,6 @@ class App extends Component {
             getBars={bar => this.getBars(bar)} />}/>
           </Switch>
         </DataProvider>
-
       </div>
 
     );
