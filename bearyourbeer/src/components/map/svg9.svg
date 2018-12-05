@@ -1,0 +1,26 @@
+<svg width="580" height="400.00000000000006" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <defs>
+   <style>.cls-1{fill:#707070;}.cls-2{fill:none;stroke:#ffd400;stroke-miterlimit:10;stroke-width:2px;}</style>
+  </defs>
+  <path d="m270.49884,110.205498c0,1.500092 -0.054718,2.492767 -0.500031,6.000366c-0.570251,4.491905 -1.505463,9.134903 -3.500214,15.500938c-1.610291,5.139114 -2.000122,7.500458 -2.000122,8.000488l0,0.500031l0,1.000061" id="svg_31" stroke-opacity="null" stroke-width="0" stroke="#000" fill="none"/>
+  <g stroke="null" id="svg_38">
+   <g stroke="null" id="svg_36" fill="#000000" transform="matrix(0.04863362245160378,0,0,-0.03910566381637382,-1744.6474878627478,-403.10109946368186) ">
+    <path stroke="null" fill="#da2627" id="svg_37" d="m41681.165396,-10539.970599c-276,-28 -392,-47 -590,-99c-853,-222 -1563,-798 -1958,-1590c-299,-600 -385,-1335 -232,-1975c76,-316 165,-524 413,-970c269,-484 315,-559 787,-1285c111,-170 256,-395 322,-500c768,-1214 1218,-2270 1474,-3459c15,-68 18,-62 44,64c104,524 325,1206 568,1755c302,682 612,1227 1260,2214c450,688 566,882 791,1331c253,502 304,636 370,960c69,340 65,774 -10,1150c-115,575 -417,1120 -860,1551c-471,457 -1078,743 -1774,834c-118,15 -516,28 -605,19z"/>
+   </g>
+  </g>
+  <text stroke="#000" transform="matrix(13.433609008789062,0,0,10.528879165649412,-2937.271930456162,-680.633221387863) " xml:space="preserve" text-anchor="start" font-family="Georgia, Times, 'Times New Roman', serif" font-size="24" id="svg_43" y="84.628486" x="234.629399" stroke-opacity="null" stroke-width="0" fill="#ffffff">9</text>
+  <defs>
+   <style>.cls-1{fill:#da2627;}.cls-2{fill:#fff;}</style>
+  </defs>
+ </g>
+</svg>
