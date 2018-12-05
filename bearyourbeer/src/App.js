@@ -43,6 +43,7 @@ class App extends Component {
       trajet: data
     })
   }
+ 
 
   render() {
     return (
@@ -57,7 +58,7 @@ class App extends Component {
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
             getBars={bar => this.getBars(bar)}
-            goUpTrajet={(data)=>this.goUpTrajet(data)} />}/> 
+            goUpTrajet={(data)=>this.goUpTrajet(data)}  />}/> 
             <Route path="/addresspage" 
             render={props => <Addresspage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
