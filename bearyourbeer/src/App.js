@@ -8,6 +8,11 @@ import Geopage from './geopage';
 import Addresspage from './addresspage';
 import { DataProvider } from "./components/ContextApi/DataContext";
 
+
+
+
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,12 +20,18 @@ class App extends Component {
       beerDistance: 1,
       distance: 2,
       nbBar: 3,
-      latLng: {}
+      latLng: {},
+      bars: ['first'],
+      trajet: []
     }
   }
 
+  getBars(bar){
+    this.setState({bars: bar})
+  }
+
   handleSliderData(dataType, data){
-    this.setState({ dataType: data });
+    this.setState({ [dataType]: data });
   }
 
   getLatlng(data) {
@@ -28,19 +39,35 @@ class App extends Component {
       latLng: data
     })
   }
+
+  goUpTrajet(data) {
+    this.setState({
+      trajet: data
+    })
+  }
+ 
+
   render() {
     return (
 
       <div>
         <DataProvider value={this.state.latLng}>
-
           <Switch>
             <Route exact path="/" render={() => <FirstPage 
             latLngCallback={(data) => this.getLatlng(data)} />} />
             <Route path="/geopage" 
             render={props => <Geopage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
-            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)} />} />
+            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
+            data={this.state}
+            getBars={bar => this.getBars(bar)}
+            goUpTrajet={(data)=>this.goUpTrajet(data)}  />}/> 
+            <Route path="/addresspage" 
+            render={props => <Addresspage location={this.state.bars}
+            latLngCallback={(data) => this.getLatlng(data)} 
+            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
+            data={this.state}
+            getBars={bar => this.getBars(bar)} />}/>
           </Switch>
         </DataProvider>
 

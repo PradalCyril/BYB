@@ -76,7 +76,7 @@ class RangeSlider extends Component {
                     </div>
                 </div>
                 <div className="search-box user-input">
-                    <SearchBox destination="addresspage" />
+                    <SearchBox destination="/geopage" latLngCallback={(data) => this.props.latLngCallback(data)}/>
                 </div>
                 </div>
             </React.Fragment>
@@ -105,6 +105,7 @@ class RangeSlider extends Component {
 
     }
     sliderValue3(ev) {
+        
         this.props.sliderCallback('nbBar', ev.target.value)
         this._result3.value = ev.target.value;
         this.setState({ nbBar: ev.target.value })
