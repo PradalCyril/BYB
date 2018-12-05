@@ -13,19 +13,11 @@ class ListBar extends Component {
 
 
   componentDidMount() {
-
-    fetch('https://maps.googleapis.com/maps/api/place/textsearch/json?location=50.467444,4.869753&radius=100&type=bar&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I', {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-      }
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState({ bar: data.results })
-      }
-      )
+    this.setState({bar: this.props.location})
   }
-
+componentDidUpdate(){
+  console.log(this.state.bar)
+}
   render() {
 
     const itemBar = this.state.bar.map((test, index) => (

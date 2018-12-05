@@ -32,7 +32,7 @@ class Geopage extends Component {
 
                 />
                 {/*<SimpleMap location={this.props.location} addressloc={this.props.data}/>*/}
-                <ListBar />
+                <ListBar location={this.state.location} />
             </div>
         );
     }

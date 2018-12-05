@@ -41,10 +41,6 @@ class App extends Component {
             render={props => <Geopage location={this.state.bars}
             latLngCallback={(data) => this.getLatlng(data)} 
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)} />} />
-            <Route path="/addresspage" 
-            render={props => <Addresspage location={this.state.bars}
-            latLngCallback={(data) => this.getLatlng(data)} 
-            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}/>} />
           </Switch>
         </DataProvider>
 
