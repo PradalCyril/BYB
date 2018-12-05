@@ -22,7 +22,7 @@ class Waypoints extends Component {
         
         if (prevProps.data.nbBar !== this.props.data.nbBar) {
             let listBar = 0
-
+            console.log(this.props.data.nbBar+ " " +this.props.data.bars)
             for (let i = 0; i < this.props.data.nbBar; i++) {
                 listBar += `${this.props.data.bars[i].geometry.location.lat}  , ${this.props.data.bars[i].geometry.location.lng} |`
             }

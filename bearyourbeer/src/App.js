@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+
+
 import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
@@ -46,6 +48,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div>
         <DataProvider value={this.state.latLng}>
           <Switch>

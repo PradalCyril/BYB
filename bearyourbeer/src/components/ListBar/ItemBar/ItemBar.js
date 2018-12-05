@@ -17,6 +17,22 @@ class ItemBar extends Component {
             colorOpen: "opening"
         }
     }
+    componentDidUpdate(prevProps){
+        if(prevProps.data.name !== this.props.data.name){
+        this.setState({
+            
+                name: this.props.data.name,
+                adress: this.props.data.formatted_address,
+                imgWidth: this.props.data.photos ? this.props.data.photos[0].width + "&photoreference=" : "",
+                reference: this.props.data.photos ? this.props.data.photos[0].photo_reference + "&key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I" : "",
+                initialLink: this.props.data.photos ? "https://maps.googleapis.com/maps/api/place/photo?maxwidth=" : "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
+                note: this.props.data.rating || "no rating",
+                star: "",
+                open: this.props.data.opening_hours === undefined ? "existepas" : this.props.data.opening_hours.open_now,
+            
+
+        })}
+    }
     componentDidMount() {
         this.star()
         this.opening()
