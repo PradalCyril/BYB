@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
 import { DataProvider } from "./components/ContextApi/DataContext";
-
+import Addresspage from './addresspage';
 
 class App extends Component {
   constructor(props) {
@@ -13,14 +13,15 @@ class App extends Component {
       beerDistance: 1,
       distance: 2,
       nbBar: 3,
-      latLng: {},
-      bars: ['first'],
+      latLng: {lat: 50.8422864, lng: 4.3639914},
+      geolocated: true,
+      coords: [],
+      bars: ["salut"],
       trajet: []
     }
   }
-
   getBars(bar){
-    this.setState({bars: bar})
+    this.setState({bars: bar});
   }
 
   handleSliderData(dataType, data){
@@ -38,7 +39,10 @@ class App extends Component {
       trajet: data
     })
   }
- 
+ componentDidUpdate() {
+	console.log(this.state.bars)
+	console.log(this.state.latLng);
+ }
 
   render() {
     return (
@@ -52,8 +56,8 @@ class App extends Component {
             latLngCallback={(data) => this.getLatlng(data)} 
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
-            getBars={bar => this.getBars(bar)}
-            goUpTrajet={(data)=>this.goUpTrajet(data)}  />}/> 
+            getBars={bar => this.getBars(bar)} geolocated={this.state.geolocated} goUpTrajet={(data)=>this.goUpTrajet(data)} />} />
+            
           </Switch>
         </DataProvider>
       </div>
