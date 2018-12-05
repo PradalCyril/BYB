@@ -3,16 +3,76 @@ import GoogleMapReact from 'google-map-react';
 import {  getLocation } from './API';
 import ouvrebouteille from './ouvrebouteille2.svg';
 import './map.css';
+import svg1 from './svg1.svg';
+import svg2 from './svg2.svg';
+import svg3 from './svg3.svg';
+import svg4 from './svg4.svg';
+import svg5 from './svg5.svg';
+import svg6 from './svg6.svg';
+import svg7 from './svg7.svg';
+import svg8 from './svg8.svg';
+import svg9 from './svg9.svg';
+import svg10 from './svg10.svg';
 
 const AnyReactComponent = () => <div><img src={ouvrebouteille} alt="location pin" height="42" width="42" /></div>;
+const AnyReactComponent1 = ({ image }) => <div><img src={svg1} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent2 = ({ image }) => <div><img src={svg2} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent3 = ({ image }) => <div><img src={svg3} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent4 = ({ image }) => <div><img src={svg4} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent5 = ({ image }) => <div><img src={svg5} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent6 = ({ image }) => <div><img src={svg6} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent7 = ({ image }) => <div><img src={svg7} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent8 = ({ image }) => <div><img src={svg8} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent9 = ({ image }) => <div><img src={svg9} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent10 = ({ image }) => <div><img src={svg10} alt="location pin" height="42" width="35" /></div>;
 
 class SimpleMap extends Component {
 	constructor(props){	
 		super(props)
 		this.state = {
 			location: {
-				lat: -84.3905373,
-				lng: -170.2775355
+				lat: 50.8422864,
+				lng: 4.3639914
+			},
+			pin1: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin2: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin3: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin4: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin5: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin6: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin7: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin8: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin9: {
+				lat: -81.00,
+				lng: 57.00
+			},
+			pin10: {
+				lat: -81.00,
+				lng: 57.00
 			},
 			polesud: {
 				lat: -84.3905373,
@@ -20,14 +80,21 @@ class SimpleMap extends Component {
 			},
 			haveUsersLocation: false,
 			zoom: 12,
-			pins: [new Array(10)],
-			createPins: false,
 			locIsReady: false
 		}
 	}
 	componentDidUpdate(prevProps) {
 		if (prevProps.location !== this.props.location) {
-			this.setState({locIsReady: true})
+			this.setState({pin1: this.props.location[0].geometry.location})
+			this.setState({pin2: this.props.location[1].geometry.location})
+			this.setState({pin3: this.props.location[2].geometry.location})
+			this.setState({pin4: this.props.location[3].geometry.location})
+			this.setState({pin5: this.props.location[4].geometry.location})
+			this.setState({pin6: this.props.location[5].geometry.location})
+			this.setState({pin7: this.props.location[6].geometry.location})
+			this.setState({pin8: this.props.location[7].geometry.location})
+			this.setState({pin9: this.props.location[8].geometry.location})
+			this.setState({pin10: this.props.location[9].geometry.location})
 		}
 	}
 	componentDidMount() {
@@ -46,14 +113,6 @@ class SimpleMap extends Component {
 
 	}
 
-	componentWillMount() {
-		if(this.state.createPins === false){
-			for(let i = 1; i < 11; i++){
-				this.state.pins.push(`<svg width="420" height="350" viewBox="0 0 3500 3500" xmlns="http://www.w3.org/2000/svg"><defs><style></style></defs><path d="M270.499 110.205c0 1.5-.055 2.493-.5 6-.57 4.493-1.506 9.136-3.5 15.502-1.61 5.139-2 7.5-2 8v1.5" id="svg_31" stroke-opacity="null" stroke-width="0" stroke="#000" fill="none"/><g stroke="null" id="svg_38"><g id="svg_36" transform="matrix(.04863 0 0 -.0391 -1744.647 -403.101)"><path fill="#da2627" id="svg_37" d="M41681.165-10539.97c-276-28-392-47-590-99-853-222-1563-798-1958-1590-299-600-385-1335-232-1975 76-316 165-524 413-970 269-484 315-559 787-1285 111-170 256-395 322-500 768-1214 1218-2270 1474-3459 15-68 18-62 44 64 104 524 325 1206 568 1755 302 682 612 1227 1260 2214 450 688 566 882 791 1331 253 502 304 636 370 960 69 340 65 774-10 1150-115 575-417 1120-860 1551-471 457-1078 743-1774 834-118 15-516 28-605 19z"/></g></g><text stroke="#000" transform="matrix(13.4336 0 0 10.52888 -2937.272 -680.633)" font-family="Georgia, Times, 'Times New Roman', serif" font-size="24" id="svg_43" y="85.151" x="234.183" stroke-opacity="null" stroke-width="0" fill="#fff">` + i + `</text><defs><style></style></defs></svg>`
-				)}
-			this.setState({ createPins: true})
-		}
-	}
 	render(){
 		const position = [this.state.location.lat, this.state.location.lng];
 		return (
@@ -67,73 +126,87 @@ class SimpleMap extends Component {
 			lat={this.state.location.lat}
 			lng={this.state.location.lng}
 			/>
+			<AnyReactComponent1
+			lat={this.state.pin1.lat}
+			lng={this.state.pin1.lng}
+			/>
+			<AnyReactComponent2
+			lat={this.state.pin2.lat}
+			lng={this.state.pin2.lng}
+			/>
+			<AnyReactComponent3
+			lat={this.state.pin3.lat}
+			lng={this.state.pin3.lng}
+			/>
+			<AnyReactComponent4
+			lat={this.state.pin4.lat}
+			lng={this.state.pin4.lng}
+			/>
+			<AnyReactComponent5
+			lat={this.state.pin5.lat}
+			lng={this.state.pin5.lng}
+			/>
+			<AnyReactComponent6
+			lat={this.state.pin6.lat}
+			lng={this.state.pin6.lng}
+			/>
+			<AnyReactComponent7
+			lat={this.state.pin7.lat}
+			lng={this.state.pin7.lng}
+			/>
+			<AnyReactComponent8
+			lat={this.state.pin8.lat}
+			lng={this.state.pin8.lng}
+			/>
+			<AnyReactComponent9
+			lat={this.state.pin9.lat}
+			lng={this.state.pin9.lng}
+			/>
+			<AnyReactComponent10
+			lat={this.state.pin10.lat}
+			lng={this.state.pin10.lng}
+			/>
+
+
 			{this.state.locIsReady &&
 				<div>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[0]
-				}}
-				lat={this.props.location[0].geometry.location.lat}
-				lng={this.props.location[0].geometry.location.lng}
+				<AnyReactComponent1
+				lat={this.state.pin.lat}
+				lng={this.state.pin.lng}
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[1]
-				}}
+				<AnyReactComponent2
 				lat={this.props.location[1].geometry.location.lat}
 				lng={this.props.location[1].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[2]
-				}}
+				<AnyReactComponent3
 				lat={this.props.location[2].geometry.location.lat}
 				lng={this.props.location[2].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[3]
-				}}
+				<AnyReactComponent4
 				lat={this.props.location[3].geometry.location.lat}
 				lng={this.props.location[3].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[4]
-				}}
+				<AnyReactComponent5
 				lat={this.props.location[4].geometry.location.lat}
 				lng={this.props.location[4].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[5]
-				}}
+				<AnyReactComponent6
 				lat={this.props.location[5].geometry.location.lat}
 				lng={this.props.location[5].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[6]
-				}}
+				<AnyReactComponent7
 				lat={this.props.location[6].geometry.location.lat}
 				lng={this.props.location[6].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[7]
-				}}
+				<AnyReactComponent8
 				lat={this.props.location[7].geometry.location.lat}
 				lng={this.props.location[7].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[8]
-				}}
+				<AnyReactComponent9
 				lat={this.props.location[8].geometry.location.lat}
 				lng={this.props.location[8].geometry.location.lng}
-
 				/>
-				<p dangerouslySetInnerHTML={{
-					__html: this.state.pins[9]
-				}}
+				<AnyReactComponent10
 				lat={this.props.location[9].geometry.location.lat}
 				lng={this.props.location[9].geometry.location.lng}
 				/>
