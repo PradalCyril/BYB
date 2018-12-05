@@ -1,0 +1,52 @@
+
+
+.list-bar--container{
+    padding-top: 5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.list-bar--container{
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+
+.list-bar--title{
+    font-size: 1.3em;
+}
+@media screen and (min-width: 750px){
+    .list-bar--container{
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .list-bar--title{
+        font-size: 1.5em;
+    }
+    
+}
+
+@media screen and (min-width: 1080px){
+    .list-bar--container{
+        width: 58%;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 1280px){
+    .container{
+        max-width: 1280px;
+    }
+    
+}
