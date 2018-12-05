@@ -5,6 +5,7 @@ import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
 import { DataProvider } from "./components/ContextApi/DataContext";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +13,7 @@ class App extends Component {
       beerDistance: 1,
       distance: 2,
       nbBar: 3,
-      latLng: {lat: 50.8467316, lng: 4.352413800000022},
+      latLng: {lat: 50.8422864, lng: 4.3639914},
       geolocated: true,
       coords: [],
       bars: ["salut"],
