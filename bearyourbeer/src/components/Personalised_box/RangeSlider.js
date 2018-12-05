@@ -75,7 +75,7 @@ class RangeSlider extends Component {
                     </div>
                 </div>
                 <div className="search-box user-input">
-                    <SearchBox destination="addresspage" />
+                    <SearchBox destination="geopage" />
                 </div>
 
             </React.Fragment>
