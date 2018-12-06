@@ -6,7 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
 import { DataProvider } from "./components/ContextApi/DataContext";
-import Addresspage from './addresspage';
+
 
 class App extends Component {
   constructor(props) {
@@ -60,7 +60,6 @@ class App extends Component {
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
             getBars={bar => this.getBars(bar)} geolocated={this.state.geolocated} goUpTrajet={(data)=>this.goUpTrajet(data)} />} />
-            
           </Switch>
         </DataProvider>
       </div>

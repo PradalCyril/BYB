@@ -15,8 +15,8 @@ import svg9 from './svg9.svg';
 import svg10 from './svg10.svg';
 
 const AnyReactComponent = () => <div><img src={ouvrebouteille} alt="location pin" height="42" width="42" /></div>;
-const AnyReactComponent1 = ({ image }) => <div><img src={svg1} alt="location pin" height="42" width="35" /></div>;
-const AnyReactComponent2 = ({ image }) => <div><img src={svg2} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent1 = ({ image }) => <div><img src={svg1} alt="location pin" height="42" width="42" /></div>;
+const AnyReactComponent2 = ({ image }) => <div><img src={svg2} alt="location pin" height="42" width="42" /></div>;
 const AnyReactComponent3 = ({ image }) => <div><img src={svg3} alt="location pin" height="42" width="35" /></div>;
 const AnyReactComponent4 = ({ image }) => <div><img src={svg4} alt="location pin" height="42" width="35" /></div>;
 const AnyReactComponent5 = ({ image }) => <div><img src={svg5} alt="location pin" height="42" width="35" /></div>;
@@ -31,8 +31,8 @@ class SimpleMap extends Component {
 		super(props)
 		this.state = {
 			location: {
-				lat: 50.8422864,
-				lng: 4.3639914
+				lat: 50.467388,
+				lng: 4.871985
 			},
 			pin1: {
 				lat: -81.00,
@@ -74,33 +74,44 @@ class SimpleMap extends Component {
 				lat: -81.00,
 				lng: 57.00
 			},
-			polesud: {
-				lat: -84.3905373,
-				lng: -170.2775355
-			},
+			slice: [],
 			haveUsersLocation: false,
-			zoom: 12,
+			zoom: 15,
 			locIsReady: false
 		}
 	}
-	componentDidUpdate(prevProps) {
-		console.log("ma postion1" ,this.props.data.latLng)
-
-		
+	componentDidUpdate(prevProps) {	
 		if (prevProps.location !== this.props.location) {
-			this.setState({location: this.props.data.latLng})
+			this.setState({location: this.props.data.latLng, slice: this.props.data.bars.slice(0, this.props.data.nbBar)})
+			console.log(this.state.slice, "farkokososososos")
+		}
+		if (prevProps.location[0] !== this.props.location[0]) {
 			this.setState({pin1: this.props.location[0].geometry.location})
 			this.setState({pin2: this.props.location[1].geometry.location})
 			this.setState({pin3: this.props.location[2].geometry.location})
+		}
+		if ((prevProps.location[3] !== this.props.location[3]) && (this.props.data.nbBar >= 4)) {
 			this.setState({pin4: this.props.location[3].geometry.location})
+		}
+		if ((prevProps.location[4] !== this.props.location[4]) && (this.props.data.nbBar >= 5)) {
 			this.setState({pin5: this.props.location[4].geometry.location})
+		}
+		if ((prevProps.location[5] !== this.props.location[5]) && (this.props.data.nbBar >= 6)) {
 			this.setState({pin6: this.props.location[5].geometry.location})
+		}
+		if ((prevProps.location[6] !== this.props.location[6]) && (this.props.data.nbBar >= 7)) {
 			this.setState({pin7: this.props.location[6].geometry.location})
+		}
+		if ((prevProps.location[7] !== this.props.location[7]) && (this.props.data.nbBar >= 8)) {
 			this.setState({pin8: this.props.location[7].geometry.location})
+		}
+		if ((prevProps.location[8] !== this.props.location[8]) && (this.props.data.nbBar >= 9)) {
 			this.setState({pin9: this.props.location[8].geometry.location})
+		}
+		if ((prevProps.location[9] !== this.props.location[9]) && (this.props.data.nbBar >= 10)) {
 			this.setState({pin10: this.props.location[9].geometry.location})
 		}
-	}
+		}
 	componentDidMount() {
 		const geolocated = this.props.geolocated;
 		if(geolocated){
@@ -109,7 +120,7 @@ class SimpleMap extends Component {
 					this.setState({
 						location,
 						haveUsersLocation: true,
-						zoom: 16
+						zoom: 18
 					});
 					this.props.latLngCallback(location)
 				});
@@ -119,7 +130,6 @@ class SimpleMap extends Component {
 
 	render(){
 		const position = [this.state.location.lat, this.state.location.lng];
-		console.log("ma postion" ,this.props.data.latLng)
 		return (
 			<div className="style-map">
 			<GoogleMapReact
@@ -128,8 +138,8 @@ class SimpleMap extends Component {
 			zoom={this.state.zoom}
 			>
 			<AnyReactComponent
-			lat={position.lat}
-			lng={position.lng}
+			lat={this.state.location.lat}
+			lng={this.state.location.lng}
 			/>
 			<AnyReactComponent1
 			lat={this.state.pin1.lat}
@@ -171,52 +181,6 @@ class SimpleMap extends Component {
 			lat={this.state.pin10.lat}
 			lng={this.state.pin10.lng}
 			/>
-
-
-			{this.state.locIsReady &&
-				<div>
-				<AnyReactComponent1
-				lat={this.state.pin.lat}
-				lng={this.state.pin.lng}
-				/>
-				<AnyReactComponent2
-				lat={this.props.location[1].geometry.location.lat}
-				lng={this.props.location[1].geometry.location.lng}
-				/>
-				<AnyReactComponent3
-				lat={this.props.location[2].geometry.location.lat}
-				lng={this.props.location[2].geometry.location.lng}
-				/>
-				<AnyReactComponent4
-				lat={this.props.location[3].geometry.location.lat}
-				lng={this.props.location[3].geometry.location.lng}
-				/>
-				<AnyReactComponent5
-				lat={this.props.location[4].geometry.location.lat}
-				lng={this.props.location[4].geometry.location.lng}
-				/>
-				<AnyReactComponent6
-				lat={this.props.location[5].geometry.location.lat}
-				lng={this.props.location[5].geometry.location.lng}
-				/>
-				<AnyReactComponent7
-				lat={this.props.location[6].geometry.location.lat}
-				lng={this.props.location[6].geometry.location.lng}
-				/>
-				<AnyReactComponent8
-				lat={this.props.location[7].geometry.location.lat}
-				lng={this.props.location[7].geometry.location.lng}
-				/>
-				<AnyReactComponent9
-				lat={this.props.location[8].geometry.location.lat}
-				lng={this.props.location[8].geometry.location.lng}
-				/>
-				<AnyReactComponent10
-				lat={this.props.location[9].geometry.location.lat}
-				lng={this.props.location[9].geometry.location.lng}
-				/>
-				</div>
-			}
 			</GoogleMapReact>
 			</div>
 		);

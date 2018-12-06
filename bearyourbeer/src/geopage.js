@@ -10,7 +10,6 @@ let userRadius = 1000;
 
 class Geopage extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
@@ -80,4 +79,4 @@ class Geopage extends Component {
     }
 }
 
-export default Geopage;
+export default Geopage
