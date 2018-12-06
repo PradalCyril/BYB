@@ -116,7 +116,7 @@ class SimpleMap extends Component {
 	render(){
 		const position = [this.state.location.lat, this.state.location.lng];
 		return (
-			<div style={{ height: '100vh', width: '100%' }}>
+			<div className="style-map">
 			<GoogleMapReact
 			bootstrapURLKeys={{ key:"AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I" }}
 			center={position}
