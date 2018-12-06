@@ -31,8 +31,8 @@ class SimpleMap extends Component {
 		super(props)
 		this.state = {
 			location: {
-				lat: 50.8422864,
-				lng: 4.3639914
+				lat: 50.467388,
+				lng: 4.871985
 			},
 			pin1: {
 				lat: -81.00,
@@ -84,19 +84,33 @@ class SimpleMap extends Component {
 		}
 	}
 	componentDidUpdate(prevProps) {
-		if (prevProps.location !== this.props.location) {
+		if (prevProps.location[0] !== this.props.location[0]) {
 			this.setState({pin1: this.props.location[0].geometry.location})
 			this.setState({pin2: this.props.location[1].geometry.location})
 			this.setState({pin3: this.props.location[2].geometry.location})
+		}
+		if (prevProps.location[3] !== this.props.location[3]) {
 			this.setState({pin4: this.props.location[3].geometry.location})
+		}
+		if (prevProps.location[4] !== this.props.location[4]) {
 			this.setState({pin5: this.props.location[4].geometry.location})
+		}
+		if (prevProps.location[5] !== this.props.location[5]) {
 			this.setState({pin6: this.props.location[5].geometry.location})
+		}
+		if (prevProps.location[6] !== this.props.location[6]) {
 			this.setState({pin7: this.props.location[6].geometry.location})
+		}
+		if (prevProps.location[7] !== this.props.location[7]) {
 			this.setState({pin8: this.props.location[7].geometry.location})
+		}
+		if (prevProps.location[8] !== this.props.location[8]) {
 			this.setState({pin9: this.props.location[8].geometry.location})
+		}
+		if (prevProps.location[9] !== this.props.location[9]) {
 			this.setState({pin10: this.props.location[9].geometry.location})
 		}
-	}
+		}
 	componentDidMount() {
 		const geolocated = this.props.geolocated;
 		if(geolocated){
