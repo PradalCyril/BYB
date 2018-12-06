@@ -15,8 +15,8 @@ import svg9 from './svg9.svg';
 import svg10 from './svg10.svg';
 
 const AnyReactComponent = () => <div><img src={ouvrebouteille} alt="location pin" height="42" width="42" /></div>;
-const AnyReactComponent1 = ({ image }) => <div><img src={svg1} alt="location pin" height="42" width="35" /></div>;
-const AnyReactComponent2 = ({ image }) => <div><img src={svg2} alt="location pin" height="42" width="35" /></div>;
+const AnyReactComponent1 = ({ image }) => <div><img src={svg1} alt="location pin" height="42" width="42" /></div>;
+const AnyReactComponent2 = ({ image }) => <div><img src={svg2} alt="location pin" height="42" width="42" /></div>;
 const AnyReactComponent3 = ({ image }) => <div><img src={svg3} alt="location pin" height="42" width="35" /></div>;
 const AnyReactComponent4 = ({ image }) => <div><img src={svg4} alt="location pin" height="42" width="35" /></div>;
 const AnyReactComponent5 = ({ image }) => <div><img src={svg5} alt="location pin" height="42" width="35" /></div>;
@@ -181,52 +181,6 @@ class SimpleMap extends Component {
 			lat={this.state.pin10.lat}
 			lng={this.state.pin10.lng}
 			/>
-
-
-			{this.state.locIsReady &&
-				<div>
-				<AnyReactComponent1
-				lat={this.state.pin.lat}
-				lng={this.state.pin.lng}
-				/>
-				<AnyReactComponent2
-				lat={this.props.location[1].geometry.location.lat}
-				lng={this.props.location[1].geometry.location.lng}
-				/>
-				<AnyReactComponent3
-				lat={this.props.location[2].geometry.location.lat}
-				lng={this.props.location[2].geometry.location.lng}
-				/>
-				<AnyReactComponent4
-				lat={this.props.location[3].geometry.location.lat}
-				lng={this.props.location[3].geometry.location.lng}
-				/>
-				<AnyReactComponent5
-				lat={this.props.location[4].geometry.location.lat}
-				lng={this.props.location[4].geometry.location.lng}
-				/>
-				<AnyReactComponent6
-				lat={this.props.location[5].geometry.location.lat}
-				lng={this.props.location[5].geometry.location.lng}
-				/>
-				<AnyReactComponent7
-				lat={this.props.location[6].geometry.location.lat}
-				lng={this.props.location[6].geometry.location.lng}
-				/>
-				<AnyReactComponent8
-				lat={this.props.location[7].geometry.location.lat}
-				lng={this.props.location[7].geometry.location.lng}
-				/>
-				<AnyReactComponent9
-				lat={this.props.location[8].geometry.location.lat}
-				lng={this.props.location[8].geometry.location.lng}
-				/>
-				<AnyReactComponent10
-				lat={this.props.location[9].geometry.location.lat}
-				lng={this.props.location[9].geometry.location.lng}
-				/>
-				</div>
-			}
 			</GoogleMapReact>
 			</div>
 		);
