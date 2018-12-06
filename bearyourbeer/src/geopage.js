@@ -9,7 +9,6 @@ let userRadius = 1000;
 
 class Geopage extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
@@ -62,7 +61,6 @@ class Geopage extends Component {
         return (
 
             <div>
-
                 <RangeSlider
                     latLngCallback={(data) => this.props.latLngCallback(data)}
                     sliderCallback={(dataType, data) => this.props.sliderCallback(dataType, data)}
@@ -77,4 +75,4 @@ class Geopage extends Component {
     }
 }
 
-export default Geopage;
+export default Geopage
