@@ -1,0 +1,41 @@
+.map-container{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+.background-map{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.title-slider-h1{
+        position: absolute;
+        top: 0px;
+        left: 7%;
+        color: #FFE;
+        font-family: 'Galada', cursive;
+        font-size: 3em;
+}
+@media screen and (min-width: 750px){
+    .map-container{
+        width: 85%;
+        margin:  0 auto;
+    }    
+    
+}
+
+@media screen and (min-width: 1080px){
+    .map-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }  
+}
+
+
+@media screen and (min-width: 1280px){
+    .map-container{
+        max-width: 1280px;
+    }
+    
+}

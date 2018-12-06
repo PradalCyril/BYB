@@ -84,7 +84,11 @@ class SimpleMap extends Component {
 		}
 	}
 	componentDidUpdate(prevProps) {
+		console.log("ma postion1" ,this.props.data.latLng)
+
+		
 		if (prevProps.location !== this.props.location) {
+			this.setState({location: this.props.data.latLng})
 			this.setState({pin1: this.props.location[0].geometry.location})
 			this.setState({pin2: this.props.location[1].geometry.location})
 			this.setState({pin3: this.props.location[2].geometry.location})
@@ -115,6 +119,7 @@ class SimpleMap extends Component {
 
 	render(){
 		const position = [this.state.location.lat, this.state.location.lng];
+		console.log("ma postion" ,this.props.data.latLng)
 		return (
 			<div className="style-map">
 			<GoogleMapReact
@@ -123,8 +128,8 @@ class SimpleMap extends Component {
 			zoom={this.state.zoom}
 			>
 			<AnyReactComponent
-			lat={this.state.location.lat}
-			lng={this.state.location.lng}
+			lat={position.lat}
+			lng={position.lng}
 			/>
 			<AnyReactComponent1
 			lat={this.state.pin1.lat}
