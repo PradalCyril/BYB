@@ -70,7 +70,7 @@ class Geopage extends Component {
                 {this.state.waypointsReady &&
                     <Waypoints data={this.props.data} goUpTrajet={(data) => this.props.goUpTrajet(data)} />
                 }
-                <SimpleMap location={this.props.location} addressloc={this.props.data}/>
+                <SimpleMap location={this.props.location} data={this.props.data} latLngCallback={(data) => this.props.latLngCallback(data)}/>
                 <ListBar data={this.props.data}/>
             </div>
         );
