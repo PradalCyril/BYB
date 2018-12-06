@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+
+
 import { Switch, Route } from 'react-router-dom';
 import FirstPage from './components/FirstPage/FirstPage';
 import Geopage from './geopage';
@@ -46,6 +48,7 @@ class App extends Component {
 
   render() {
     return (
+
       <div>
         <DataProvider value={this.state.latLng}>
           <Switch>
@@ -57,12 +60,7 @@ class App extends Component {
             sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
             data={this.state}
             getBars={bar => this.getBars(bar)} geolocated={this.state.geolocated} goUpTrajet={(data)=>this.goUpTrajet(data)} />} />
-            <Route path="/addresspage" 
-            render={props => <Addresspage location={this.state.bars}
-            latLngCallback={(data) => this.getLatlng(data)} 
-            sliderCallback={(dataType, data) => this.handleSliderData(dataType, data)}
-            data={this.state}
-            getBars={bar => this.getBars(bar)} />}/>
+            
           </Switch>
         </DataProvider>
       </div>

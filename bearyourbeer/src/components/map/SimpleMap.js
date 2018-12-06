@@ -74,40 +74,41 @@ class SimpleMap extends Component {
 				lat: -81.00,
 				lng: 57.00
 			},
-			polesud: {
-				lat: -84.3905373,
-				lng: -170.2775355
-			},
+			slice: [],
 			haveUsersLocation: false,
-			zoom: 12,
+			zoom: 15,
 			locIsReady: false
 		}
 	}
-	componentDidUpdate(prevProps) {
+	componentDidUpdate(prevProps) {	
+		if (prevProps.location !== this.props.location) {
+			this.setState({location: this.props.data.latLng, slice: this.props.data.bars.slice(0, this.props.data.nbBar)})
+			console.log(this.state.slice, "farkokososososos")
+		}
 		if (prevProps.location[0] !== this.props.location[0]) {
 			this.setState({pin1: this.props.location[0].geometry.location})
 			this.setState({pin2: this.props.location[1].geometry.location})
 			this.setState({pin3: this.props.location[2].geometry.location})
 		}
-		if (prevProps.location[3] !== this.props.location[3]) {
+		if ((prevProps.location[3] !== this.props.location[3]) && (this.props.data.nbBar >= 4)) {
 			this.setState({pin4: this.props.location[3].geometry.location})
 		}
-		if (prevProps.location[4] !== this.props.location[4]) {
+		if ((prevProps.location[4] !== this.props.location[4]) && (this.props.data.nbBar >= 5)) {
 			this.setState({pin5: this.props.location[4].geometry.location})
 		}
-		if (prevProps.location[5] !== this.props.location[5]) {
+		if ((prevProps.location[5] !== this.props.location[5]) && (this.props.data.nbBar >= 6)) {
 			this.setState({pin6: this.props.location[5].geometry.location})
 		}
-		if (prevProps.location[6] !== this.props.location[6]) {
+		if ((prevProps.location[6] !== this.props.location[6]) && (this.props.data.nbBar >= 7)) {
 			this.setState({pin7: this.props.location[6].geometry.location})
 		}
-		if (prevProps.location[7] !== this.props.location[7]) {
+		if ((prevProps.location[7] !== this.props.location[7]) && (this.props.data.nbBar >= 8)) {
 			this.setState({pin8: this.props.location[7].geometry.location})
 		}
-		if (prevProps.location[8] !== this.props.location[8]) {
+		if ((prevProps.location[8] !== this.props.location[8]) && (this.props.data.nbBar >= 9)) {
 			this.setState({pin9: this.props.location[8].geometry.location})
 		}
-		if (prevProps.location[9] !== this.props.location[9]) {
+		if ((prevProps.location[9] !== this.props.location[9]) && (this.props.data.nbBar >= 10)) {
 			this.setState({pin10: this.props.location[9].geometry.location})
 		}
 		}
@@ -119,7 +120,7 @@ class SimpleMap extends Component {
 					this.setState({
 						location,
 						haveUsersLocation: true,
-						zoom: 16
+						zoom: 18
 					});
 					this.props.latLngCallback(location)
 				});

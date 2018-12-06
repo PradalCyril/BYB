@@ -9,6 +9,7 @@ class RangeSlider extends Component {
 
         return (
             <React.Fragment>
+                <div className="container-slider">
                 <div className="perso-box user-input">
                     <div>
                         <ul className="global" onInput={(ev) => this.sliderValue1(ev)}>
@@ -75,9 +76,9 @@ class RangeSlider extends Component {
                     </div>
                 </div>
                 <div className="search-box user-input">
-                    <SearchBox destination="geopage" latLngCallback={(data) => this.props.latLngCallback(data)}/>
+                    <SearchBox destination="/geopage" latLngCallback={(data) => this.props.latLngCallback(data)}/>
                 </div>
-
+                </div>
             </React.Fragment>
         )
     }
@@ -104,6 +105,7 @@ class RangeSlider extends Component {
 
     }
     sliderValue3(ev) {
+        
         this.props.sliderCallback('nbBar', ev.target.value)
         this._result3.value = ev.target.value;
         this.setState({ nbBar: ev.target.value })
